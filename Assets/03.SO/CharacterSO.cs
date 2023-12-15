@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DefaultCharacterData", menuName = "DelegateTest/Character", order = 0)]
+[CreateAssetMenu(fileName = "DCD", menuName = "Character", order = 0)]
 
 public class CharacterSO : ScriptableObject
 {
