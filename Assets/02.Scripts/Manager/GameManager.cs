@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
 
+    public Transform Player { get; private set; }
+    [SerializeField] private string playerTag = "Player";
+
     public static GameManager Instance
     {
         get
@@ -39,6 +42,7 @@ public class GameManager : MonoBehaviour
         {
             if (_instance != this) Destroy(this);
         }
+        Player = GameObject.FindGameObjectWithTag(playerTag).transform;
     }
 
 

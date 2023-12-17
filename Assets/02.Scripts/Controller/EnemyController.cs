@@ -14,7 +14,7 @@ public class EnemyController : CharacterController
 
     protected virtual void Start()
     {
-        gameManager = GameManager.instance;
+        gameManager = GameManager.Instance;
         ClosestTarget = gameManager.Player;
     }
 

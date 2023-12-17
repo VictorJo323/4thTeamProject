@@ -14,5 +14,11 @@ public class CharacterSO : ScriptableObject
     public float spd;
     public float atksp;
     public float crit;
+    public LayerMask target;
+
+    [Header("Knock Back Info")]
+    public bool isOnKnockback;
+    public float knockbackPower;
+    public float knockbackTime;
 
 }
