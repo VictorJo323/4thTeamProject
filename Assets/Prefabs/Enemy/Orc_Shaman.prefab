@@ -400,6 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followRange: 15
   shootRange: 1
+  characterRenderer: {fileID: 2320770194043613587}
 --- !u!114 &3031032766963009034
 MonoBehaviour:
   m_ObjectHideFlags: 0
