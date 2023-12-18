@@ -19,3 +19,6 @@ MonoBehaviour:
   spd: 0
   atksp: 0
   crit: 0
+  target:
+    serializedVersion: 2
+    m_Bits: 128
