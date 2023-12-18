@@ -75,7 +75,6 @@ public class WeaponInventory : MonoBehaviour
             weapons[1] = temp;
             Debug.Log("1½½·Ô: " + weapons[0].name + "  2½½·Ô: " + weapons[1].name);
             ShowWeaponInventory.Instance.UpdateInventoryImage();
-
         }
     }
 }

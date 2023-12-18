@@ -20,7 +20,6 @@ public class PickupWeapon : MonoBehaviour
                 Weapon newWeapon = CreateWeaponFromData(weaponData);
                 playerWeapon.AddWeapon(newWeapon); // weaponData는 픽업한 무기의 정보
 
-                // 아이템 비활성화 또는 삭제
                 Destroy(gameObject);
             }
         }
@@ -35,8 +34,6 @@ public class PickupWeapon : MonoBehaviour
         Weapon weaponComponent = weaponObject.AddComponent<Weapon>();
 
         // ItemSO의 데이터를 사용하여 Weapon 컴포넌트를 초기화합니다.
-        // 여기서는 예시로 weaponData를 할당하는 것만 보여줍니다.
-        // 실제 구현에서는 더 많은 데이터를 설정할 수 있습니다.
         weaponComponent.weaponData = weaponData;
 
         // 생성된 Weapon 객체를 반환합니다.
