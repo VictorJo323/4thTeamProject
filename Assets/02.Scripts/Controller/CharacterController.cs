@@ -38,6 +38,7 @@ public class CharacterController : MonoBehaviour
     }
 
 
+
     public void CallMoveEvent(Vector2 direction)
     {
         OnMoveEvent?.Invoke(direction);

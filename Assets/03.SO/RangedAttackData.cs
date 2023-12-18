@@ -12,4 +12,6 @@ public class RangedAttackData : CharacterSO
     public int numberofProjectilesPerShot;
     public float multipleProjectilesAngel;
     public Color projectileColor;
+    public float speed;
+    public float size;
 }
