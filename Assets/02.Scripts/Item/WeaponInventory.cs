@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine;
 public class WeaponInventory : MonoBehaviour
 {
     private Weapon[] weapons = new Weapon[2];
+    public ItemDatabase itemDatabase;
+    public Transform dropPoint;
 
     public void AddWeapon(Weapon newWeapon)
     {
@@ -18,7 +21,14 @@ public class WeaponInventory : MonoBehaviour
         }
         else
         {
-            return;
+            DropUnselectedWeapon(weapons[1]);
+            weapons[1] = newWeapon;
         }
+    }
+
+    private void DropUnselectedWeapon(Weapon dropWeapon)
+    {
+        dropWeapon.gameObject.SetActive(true);
+        dropWeapon.transform.position = dropPoint.position;
     }
 }

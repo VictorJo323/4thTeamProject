@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb78ef956ec16444b00663ebff5d54d, type: 3}
   m_Name: Item_W001
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
+  itemName: "\uD65C"
+  icon: {fileID: 0}
+  description: "\uD3C9\uBC94\uD55C \uD65C"
   price: 0
-  itemType: 0
+  itemType: 1
+  isStackable: 0
+  isUnique: 0
   hp: 0
-  str: 0
+  str: 5
   def: 0
   spd: 0
   atksp: 0
