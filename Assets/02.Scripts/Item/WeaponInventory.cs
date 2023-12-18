@@ -25,8 +25,8 @@ public class WeaponInventory : MonoBehaviour
         {
             // 먼저 드롭할 아이템의 데이터를 복사하고 드롭 오브젝트를 생성합니다.
             ItemSO dataToDrop = weapons[1].weaponData;
+            DropUnselectedWeapon(weapons[1]);
             CreateDroppedWeapon(dataToDrop);
-
             // 그 후에 인벤토리 슬롯을 새 아이템으로 업데이트합니다.
             Debug.Log("아이템 버림 " + weapons[1].weaponData.itemName);
             weapons[1] = newWeapon;
@@ -57,12 +57,6 @@ public class WeaponInventory : MonoBehaviour
 
     private void DropUnselectedWeapon(Weapon dropWeapon)
     {
-        // 드롭할 아이템의 정보를 복사합니다.
-        ItemSO itemToDropData = dropWeapon.weaponData;
-
-        // 드롭된 아이템을 생성합니다.
-        CreateDroppedWeapon(itemToDropData);
-
         // 인벤토리에서 무기를 제거합니다.
         Destroy(dropWeapon.gameObject);
     }
