@@ -9,12 +9,23 @@ public class ShowWeaponInventory : MonoBehaviour
     public WeaponInventory weaponInventory;
     public Image weaponSlot1;
     public Image weaponSlot2;
-    void Update()
+
+    public static ShowWeaponInventory Instance { get; private set; }
+    private void Awake()
     {
-        UpdateInventoryImage();
+        if(Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    private void UpdateInventoryImage()
+
+    public void UpdateInventoryImage()
     {
         if (weaponInventory.weapons[0] != null)
         {
