@@ -7,6 +7,8 @@ public class RangeEnemyController : EnemyController
 {
     [SerializeField] private float followRange = 15f;
     [SerializeField] private float shootRange = 10f;
+    [SerializeField] private SpriteRenderer characterRenderer;
+
 
     protected override void FixedUpdate()
     {
@@ -43,5 +45,11 @@ public class RangeEnemyController : EnemyController
         {
             CallMoveEvent(direction);
         }
+        Rotate(direction);
+    }
+    private void Rotate(Vector2 direction)
+    {
+        float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        characterRenderer.flipX = Mathf.Abs(rotZ) > 90f;
     }
 }
