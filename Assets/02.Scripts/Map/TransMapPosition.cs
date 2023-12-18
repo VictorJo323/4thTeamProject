@@ -2,6 +2,7 @@ using Cainos.PixelArtTopDown_Basic;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class TransMapPosition : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class TransMapPosition : MonoBehaviour
     private TopDownCharacterController player;
     private CameraFollow camera;
 
-    [SerializeField] private Transform target;
+    [SerializeField] private Transform StagePos;
+    [SerializeField] GameObject _trueMap;
+    [SerializeField] GameObject _falseMap;
 
     private void Awake()
     {
@@ -31,9 +34,12 @@ public class TransMapPosition : MonoBehaviour
     {
         if (collider.CompareTag("Player"))
         {
+            _trueMap.SetActive(true);
+            _falseMap.SetActive(false);
+
             player.currentMapName = mapName;
             camera.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            player.transform.position = target.transform.position;
+            player.transform.position = StagePos.transform.position;
         }
     }
 }
