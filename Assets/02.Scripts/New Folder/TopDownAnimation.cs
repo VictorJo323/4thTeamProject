@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animation : MonoBehaviour
+public class TopDownAnimation : MonoBehaviour
 {
     protected Animator animator;
-    protected CharacterController controller;
+    protected TopDownCharacterController controller;
 
     protected virtual void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        controller = GetComponent<CharacterController>();
+        controller = GetComponent<TopDownCharacterController>();
     }
 }

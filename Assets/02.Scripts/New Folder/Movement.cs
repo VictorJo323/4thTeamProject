@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private CharacterController _controller;
+    private TopDownCharacterController _controller;
 
     private Vector2 _movementDirection = Vector2.zero;
     private Rigidbody2D _rigidbody;
@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
 
     private void Awake()
     {
-        _controller = GetComponent<CharacterController>();
+        _controller = GetComponent<TopDownCharacterController>();
         _stats = GetComponent<CharacterStatsHandler>();
         _rigidbody = GetComponent<Rigidbody2D>();
     }
@@ -49,7 +49,7 @@ public class Movement : MonoBehaviour
 
     private void ApplyMovment(Vector2 direction)
     {
-        direction = direction * _stats.CurrentStats.speed;
+        direction = direction * _stats.CurrentStats.spd;
 
         if (knockbackDuration > 0.0f)
         {

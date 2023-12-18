@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : CharacterController
+public class EnemyController : TopDownCharacterController
 {
     GameManager gameManager;
     protected Transform ClosestTarget { get; private set; }

@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
-public class Player : TopDownCharacterController
+public class PlayerInputController : TopDownCharacterController
 {
     // Start is called before the first frame update
     private Camera _camera;

@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class TopDownCharacterController : MonoBehaviour
 {
+    public string currentMapName;
+
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
     public event Action<CharacterSO> OnAttackEvent;
@@ -36,8 +38,6 @@ public class CharacterController : MonoBehaviour
             CallAttackEvent(Stats.CurrentStats.characterSO);
         }
     }
-
-
 
     public void CallMoveEvent(Vector2 direction)
     {

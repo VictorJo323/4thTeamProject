@@ -16,9 +16,12 @@ MonoBehaviour:
   hp: 0
   atk: 0
   def: 0
-  spd: 0
+  spd: 20
   atksp: 0
   crit: 0
   target:
     serializedVersion: 2
     m_Bits: 128
+  isOnKnockback: 0
+  knockbackPower: 0
+  knockbackTime: 0
