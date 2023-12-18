@@ -16,6 +16,7 @@ public enum Type
 public class ItemSO : ScriptableObject
 {
     [Header("Feature")]
+    public GameObject prefab;
     public string itemName;
     public Sprite icon;
     public string description;

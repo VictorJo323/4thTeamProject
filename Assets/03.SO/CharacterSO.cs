@@ -7,7 +7,7 @@ using UnityEngine;
 public class CharacterSO : ScriptableObject
 {
     [Header("Character Info")]
-    public string name;
+    public string charName;
     public int hp;
     public int atk;
     public int def;
