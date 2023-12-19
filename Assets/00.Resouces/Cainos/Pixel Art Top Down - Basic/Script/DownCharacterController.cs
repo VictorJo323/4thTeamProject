@@ -4,8 +4,10 @@ using UnityEngine;
 
 namespace Cainos.PixelArtTopDown_Basic
 {
-    public class TopDownCharacterController : MonoBehaviour
+    public class DownCharacterController : MonoBehaviour
     {
+        public string currentMapName;
+
         public float speed;
 
         private Animator animator;

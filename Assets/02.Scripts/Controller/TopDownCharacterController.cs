@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TopDownCharacterController : MonoBehaviour
-{
-    public string currentMapName;
-
+{ 
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
     public event Action<CharacterSO> OnAttackEvent;
