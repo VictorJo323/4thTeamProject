@@ -10,7 +10,7 @@ public class PickupWeapon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && (weaponData.itemType == Type.MeleeWeapon || weaponData.itemType == Type.RangedWeapon))
         {
             WeaponInventory playerWeapon = collision.GetComponent<WeaponInventory>();
 

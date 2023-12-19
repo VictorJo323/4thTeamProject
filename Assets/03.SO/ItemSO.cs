@@ -24,6 +24,8 @@ public class ItemSO : ScriptableObject
     public Type itemType;
     public bool isStackable;
     public bool isUnique;
+    public int maxQuantity;
+    public int itemID;
 
 
     [Header("Stat")]
