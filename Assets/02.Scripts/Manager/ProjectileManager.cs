@@ -15,11 +15,6 @@ public class ProjectileManager : MonoBehaviour
         instance = this;
     }
 
-    void Start()
-    {
-
-    }
-
     public void ShootBullet(Vector2 startPostiion, Vector2 direction, RangedAttackData attackData)
     {
         GameObject obj = Instantiate(testObj);
@@ -30,5 +25,4 @@ public class ProjectileManager : MonoBehaviour
 
         obj.SetActive(true);
     }
-
 }

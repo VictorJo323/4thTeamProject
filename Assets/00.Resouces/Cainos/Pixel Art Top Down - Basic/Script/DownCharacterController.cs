@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 
 namespace Cainos.PixelArtTopDown_Basic
 {
@@ -8,13 +9,27 @@ namespace Cainos.PixelArtTopDown_Basic
     {
         public string currentMapName;
 
+        public int hp = 100;
         public float speed;
 
         private Animator animator;
 
+        private bool isDead;
+
         private void Start()
         {
             animator = GetComponent<Animator>();
+            isDead = false;
+
+            if (hp == 0)
+            {
+                isDead = true;
+
+                if (hp == 0 && isDead)
+                {
+                    GameOver();
+                }
+            }
         }
 
 
@@ -47,6 +62,12 @@ namespace Cainos.PixelArtTopDown_Basic
             animator.SetBool("IsMoving", dir.magnitude > 0);
 
             GetComponent<Rigidbody2D>().velocity = speed * dir;
+
+        }
+
+        private void GameOver()
+        {
+            Debug.Log("당신은 죽었습니다");
         }
     }
 }

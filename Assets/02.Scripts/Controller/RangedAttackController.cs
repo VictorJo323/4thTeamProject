@@ -1,7 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 public class RangedAttackController : MonoBehaviour
 {
@@ -50,7 +50,6 @@ public class RangedAttackController : MonoBehaviour
             DestroyProjectile(collision.ClosestPoint(transform.position) - _direction * .2f, fxOnDestory);
         }
     }
-
 
     public void InitializeAttack(Vector2 direction, RangedAttackData attackData, ProjectileManager projectileManager)
     {

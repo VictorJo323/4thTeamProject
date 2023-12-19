@@ -44,17 +44,4 @@ public class GameManager : MonoBehaviour
         }
         Player = GameObject.FindGameObjectWithTag(playerTag).transform;
     }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
