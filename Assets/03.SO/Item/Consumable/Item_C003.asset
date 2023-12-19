@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcb78ef956ec16444b00663ebff5d54d, type: 3}
-  m_Name: Item_W002
+  m_Name: Item_C003
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4692104875191129204, guid: a47b759fa6d370442a0bccfbb3f798d6, type: 3}
-  itemName: "\uB3C4\uB07C"
-  icon: {fileID: 21300000, guid: 172774604c1bee84185a69041576525b, type: 3}
-  description: "\uD3C9\uBC94\uD55C \uB3C4\uB07C"
+  prefab: {fileID: 648521594599982895, guid: b56776fed601e0743ae0a52b79604368, type: 3}
+  itemName: "\uC2A4\uD06C\uB864"
+  icon: {fileID: 21300000, guid: db427fab3e94daf4caa704d9314a77a1, type: 3}
+  description: 
   price: 0
   itemType: 0
-  isStackable: 0
+  isStackable: 1
   isUnique: 0
+  maxQuantity: 99
+  itemID: 3
   hp: 0
-  str: 3
-  def: 1
-  spd: 2
-  atksp: 5
+  str: 0
+  def: 0
+  spd: 0
+  atksp: 0
   crit: 0
   atkRange: 0
