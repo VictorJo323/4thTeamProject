@@ -268,10 +268,10 @@ GameObject:
   - component: {fileID: 2446172376205724188}
   - component: {fileID: 1781561555267219204}
   - component: {fileID: 3031032766963009034}
-  - component: {fileID: 6703125796682486153}
   - component: {fileID: 4758831279394479455}
   - component: {fileID: 2296882058144209080}
   - component: {fileID: 4016554045719951161}
+  - component: {fileID: 43843083721141185}
   m_Layer: 0
   m_Name: Orc_Shaman
   m_TagString: Untagged
@@ -294,7 +294,7 @@ Transform:
   - {fileID: 5494067685611265038}
   - {fileID: 6705929214374937007}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8680375673330948955
 Rigidbody2D:
@@ -383,7 +383,7 @@ MonoBehaviour:
   baseStats:
     statsChangeType: 2
     maxHealth: 4
-    speed: 1.85
+    spd: 0
     characterSO: {fileID: 11400000, guid: f2143053e8905d74b9781e9d35ba62a4, type: 2}
   statsModifiers: []
 --- !u!114 &1781561555267219204
@@ -398,8 +398,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4039f90acc85e84dbf4bbe385886e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentMapName: 
   followRange: 15
-  shootRange: 1
+  shootRange: 3
   characterRenderer: {fileID: 2320770194043613587}
 --- !u!114 &3031032766963009034
 MonoBehaviour:
@@ -414,18 +415,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 7868168331298100514}
---- !u!114 &6703125796682486153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5132125384717883609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e428ac0bd7ac7544a870645f6aff4bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4758831279394479455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,5 +450,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 010e047727e59f34d801b7738da91b1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &43843083721141185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132125384717883609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
