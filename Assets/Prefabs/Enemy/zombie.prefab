@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4713994648062869261}
   - component: {fileID: 8082925807029190044}
   - component: {fileID: 6626887099376286608}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HPBackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthChangeDelay: 0.5
+  uiBar: {fileID: 1389102986105050937}
 --- !u!114 &8134564871668487900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,7 +321,7 @@ GameObject:
   - component: {fileID: 621824157251907321}
   - component: {fileID: 7015661621840830804}
   - component: {fileID: 1389102986105050937}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,10 +377,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 4a20c13aeffe42649aa140570eb5d29a, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -503,7 +504,7 @@ GameObject:
   - component: {fileID: 3665554031257937891}
   - component: {fileID: 1736844813106727676}
   - component: {fileID: 351889951874702091}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
