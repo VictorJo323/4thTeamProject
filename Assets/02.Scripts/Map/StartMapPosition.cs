@@ -19,7 +19,7 @@ public class StartMapPosition : MonoBehaviour
     private void Start()
     {
         if (startPos == player.currentMapName)
-        { 
+        {
             camera.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             player.transform.position = transform.position;
         }
