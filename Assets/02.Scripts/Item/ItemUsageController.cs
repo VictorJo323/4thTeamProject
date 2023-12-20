@@ -19,11 +19,11 @@ public class ItemUsageController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            UseItem(1); // 1¹ø ¾ÆÀÌÅÛ »ç¿ë
+            UseItem(1); // 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            UseItem(2); // 2¹ø ¾ÆÀÌÅÛ »ç¿ë
+            UseItem(2); // 2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         }
     }
 
@@ -55,9 +55,9 @@ public class ItemUsageController : MonoBehaviour
         switch (item.itemID)
         {
             case 1:
-                healthSystem.ChangeHealth(20); // 20 Ã¼·Â È¸º¹
+                healthSystem.ChangeHealth(20);
                 break;
-            // ´Ù¸¥ ¾ÆÀÌÅÛ È¿°ú¿¡ ´ëÇÑ Ã³¸®...
+   
             case 2:
                 break;
         }
