@@ -16,7 +16,7 @@ MonoBehaviour:
   hp: 100
   atk: 1
   def: 1
-  spd: 0.1
+  spd: 1
   atksp: 1
   crit: 1
   target:

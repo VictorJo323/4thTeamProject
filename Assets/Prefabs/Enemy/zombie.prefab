@@ -91,10 +91,10 @@ GameObject:
   - component: {fileID: 1676060362105374660}
   - component: {fileID: 67994589643674946}
   - component: {fileID: 3191046402301549838}
-  - component: {fileID: 2099420957571598936}
   - component: {fileID: 8134564871668487900}
   - component: {fileID: 3857250968191849706}
   - component: {fileID: 5550802673643075875}
+  - component: {fileID: 510704464578248418}
   m_Layer: 8
   m_Name: zombie
   m_TagString: Untagged
@@ -117,7 +117,7 @@ Transform:
   - {fileID: 8612997087368164196}
   - {fileID: 2974736661881980775}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &45518036156214016
 BoxCollider2D:
@@ -221,7 +221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad68688947f3f6499b3b8027da42801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMapName: 
   followRange: 20
   targetTag: Player
   characterRenderer: {fileID: 8230461877819711120}
@@ -237,20 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010e047727e59f34d801b7738da91b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2099420957571598936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303257388603324851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f72f2c882da3f094f89174f25b6cfbcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
-  uiBar: {fileID: 1389102986105050937}
 --- !u!114 &8134564871668487900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +295,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &510704464578248418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303257388603324851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
+  uiBar: {fileID: 1389102986105050937}
 --- !u!1 &6223513984960788660
 GameObject:
   m_ObjectHideFlags: 0
