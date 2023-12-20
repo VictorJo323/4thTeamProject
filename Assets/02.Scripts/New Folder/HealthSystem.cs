@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+
 
 public class HealthSystem : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class HealthSystem : MonoBehaviour
     public event Action OnHeal;
     public event Action OnDeath;
     public event Action OnInvincibilityEnd;
+    public Image uiBar;
 
     public float CurrentHealth { get; private set; }
 
@@ -40,6 +43,7 @@ public class HealthSystem : MonoBehaviour
                 OnInvincibilityEnd?.Invoke();
             }
         }
+        uiBar.fillAmount = GetPercentage();
     }
 
     public bool ChangeHealth(float change)
@@ -74,5 +78,9 @@ public class HealthSystem : MonoBehaviour
     private void CallDeath()
     {
         OnDeath?.Invoke();
+    }
+    public float GetPercentage()
+    {
+        return CurrentHealth / MaxHealth;
     }
 }
