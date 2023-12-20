@@ -117,7 +117,7 @@ Transform:
   - {fileID: 8612997087368164196}
   - {fileID: 2974736661881980775}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &45518036156214016
 BoxCollider2D:
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
+  healthChangeDelay: 0
   uiBar: {fileID: 1389102986105050937}
 --- !u!1 &6223513984960788660
 GameObject:

@@ -97,8 +97,8 @@ GameObject:
   - component: {fileID: 1954003552327393952}
   - component: {fileID: 364420698620346309}
   - component: {fileID: -4053885107762205658}
-  - component: {fileID: 50881623035191301}
-  - component: {fileID: -6026909500405389258}
+  - component: {fileID: 2901684910003019060}
+  - component: {fileID: 4196482280420059237}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -323,7 +323,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   fxOnDestory: 1
---- !u!198 &50881623035191301
+--- !u!198 &2901684910003019060
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -331,7 +331,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 747761274267078772}
   serializedVersion: 8
-  lengthInSec: 0.5
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -406,7 +406,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 0.0001
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -459,7 +459,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 0
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -577,7 +577,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5046,7 +5046,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &-6026909500405389258
+--- !u!199 &4196482280420059237
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0

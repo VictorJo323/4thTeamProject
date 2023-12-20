@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 0
-    maxHealth: 3
+    maxHealth: 100
     spd: 1.02
     characterSO: {fileID: 11400000, guid: b8947536373fe5449aea576074bf3ccb, type: 2}
   statsModifiers: []
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
+  healthChangeDelay: 0
   uiBar: {fileID: 1389102986105050937}
 --- !u!1 &6223513984960788660
 GameObject:
