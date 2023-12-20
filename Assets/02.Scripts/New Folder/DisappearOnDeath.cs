@@ -6,11 +6,14 @@ public class DisappearOnDeath : MonoBehaviour
 {
     private HealthSystem _healthSystem;
     private Rigidbody2D _rigidbody;
+    private ItemDrop _itemDrop; 
+
 
     private void Start()
     {
         _healthSystem = GetComponent<HealthSystem>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _itemDrop = GetComponent<ItemDrop>(); 
         _healthSystem.OnDeath += OnDeath;
     }
 
@@ -28,6 +31,11 @@ public class DisappearOnDeath : MonoBehaviour
         foreach (Behaviour component in transform.GetComponentsInChildren<Behaviour>())
         {
             component.enabled = false;
+        }
+
+        if (_itemDrop != null)
+        {
+            _itemDrop.DropItem(); 
         }
 
         Destroy(gameObject, 2f);
