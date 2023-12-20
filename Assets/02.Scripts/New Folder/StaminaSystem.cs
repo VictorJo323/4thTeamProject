@@ -8,7 +8,7 @@ public class StamianSystem : MonoBehaviour
     public float amount = 20f;
     private PlayerInputController _playerInputController;
 
-    public Image uiBar;
+    public Slider uiBar;
     public float recoveryRate = 5f;
 
     public float CurrentStamina { get; private set; }
@@ -28,7 +28,7 @@ public class StamianSystem : MonoBehaviour
     {
         UpdateStamina();
         if (uiBar != null) // UI 바가 할당되어 있는 경우에만 업데이트
-            uiBar.fillAmount = GetPercentage();
+            uiBar.value = GetPercentage();
         
         
         if (Input.GetKeyDown(KeyCode.LeftShift)&&CanUseDodge())

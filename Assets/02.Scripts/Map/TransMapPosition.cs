@@ -7,7 +7,7 @@ using UnityEngine.Tilemaps;
 public class TransMapPosition : MonoBehaviour
 {
     public string mapName;
-    private DownCharacterController player;
+    private PlayerInputController player;
     private CameraFollow maincamera;
 
     [SerializeField] private Transform StagePos;
@@ -16,7 +16,7 @@ public class TransMapPosition : MonoBehaviour
 
     private void Awake()
     {
-        player = FindObjectOfType<DownCharacterController>();
+        player = FindObjectOfType<PlayerInputController>();
         maincamera = FindObjectOfType<CameraFollow>();
 
         if (player == null)
