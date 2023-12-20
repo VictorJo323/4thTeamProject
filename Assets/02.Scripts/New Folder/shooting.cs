@@ -8,6 +8,8 @@ public class Shooting : MonoBehaviour
     private TopDownCharacterController _controller;
 
     [SerializeField] private Transform projectileSpawnPosition;
+    [SerializeField] private Transform projectileSpawnPositionR;
+
     private Vector2 _aimDirection = Vector2.right;
 
     private ProjectileManager _projectileManager;
