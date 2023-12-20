@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7868168331298100514}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6705929214374937007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponPIvot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 5494067685611265038}
   - component: {fileID: 2320770194043613587}
   - component: {fileID: 2174063817483933442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5559315539082954519}
   - component: {fileID: 147057197103934199}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,9 +449,10 @@ GameObject:
   - component: {fileID: 3031032766963009034}
   - component: {fileID: 2296882058144209080}
   - component: {fileID: 4016554045719951161}
-  - component: {fileID: 43843083721141185}
   - component: {fileID: 4383393579131499422}
-  m_Layer: 0
+  - component: {fileID: 7049805458027758561}
+  - component: {fileID: -3878942521265463387}
+  m_Layer: 8
   m_Name: Orc_Shaman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,8 +579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4039f90acc85e84dbf4bbe385886e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followRange: 15
-  shootRange: 5
+  followRange: 20
+  shootRange: 10
   characterRenderer: {fileID: 2320770194043613587}
 --- !u!114 &3031032766963009034
 MonoBehaviour:
@@ -618,18 +619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010e047727e59f34d801b7738da91b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &43843083721141185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5132125384717883609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4383393579131499422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,8 +631,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
+  healthChangeDelay: 0
   uiBar: {fileID: 533109229921534818}
+--- !u!114 &7049805458027758561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132125384717883609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc913846b87a674fb9bb86b160f0f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armRenderer: {fileID: 147057197103934199}
+  armPivot: {fileID: 5559315539082954519}
+  characterRenderer: {fileID: 2320770194043613587}
+--- !u!114 &-3878942521265463387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132125384717883609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7542573458036027130
 GameObject:
   m_ObjectHideFlags: 0
