@@ -19,7 +19,7 @@ public class StamianSystem : MonoBehaviour
 
     private void Awake()
     {
-        _statsHandler = GetComponent<CharacterStatsHandler>();        
+        _statsHandler = GetComponent<CharacterStatsHandler>();
         CurrentStamina = MaxStamina; // 스태미너 초기값 설정   
     }
 

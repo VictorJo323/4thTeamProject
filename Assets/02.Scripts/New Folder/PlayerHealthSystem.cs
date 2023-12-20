@@ -43,7 +43,7 @@ public class PlayerHealthSystem : MonoBehaviour
                 OnInvincibilityEnd?.Invoke();
             }
         }
-        uiBar.value = GetPercentage();
+        //uiBar.value = GetPercentage();
     }
 
     public bool ChangeHealth(float change)

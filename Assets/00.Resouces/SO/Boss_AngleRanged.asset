@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boss_AngleRanged
   m_EditorClassIdentifier: 
   charName: Boss_Angle
-  hp: 500
+  hp: 100
   atk: 50
   def: 20
   spd: 10
@@ -26,6 +26,7 @@ MonoBehaviour:
   knockbackPower: 0
   knockbackTime: 0
   bulletNameTag: FireBall
+  bulletNameTag2: box
   duration: 5
   spread: 100
   numberofProjectilesPerShot: 10

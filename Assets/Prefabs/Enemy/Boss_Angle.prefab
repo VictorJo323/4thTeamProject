@@ -285,10 +285,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats:
-    statsChangeType: 0
-    maxHealth: 1
-    maxStamina: 0
-    spd: 0
+    statsChangeType: 2
+    maxHealth: 100
+    maxStamina: 1
+    spd: 10
     characterSO: {fileID: 11400000, guid: 3756a6c78b418fe4cb10663433432f7a, type: 2}
   statsModifiers: []
 --- !u!114 &7443477054526354628
@@ -319,6 +319,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 6649762182407797809}
+  projectileSpawnPositionR: {fileID: 0}
+  playerTransform: {fileID: 0}
 --- !u!114 &2933357958945902653
 MonoBehaviour:
   m_ObjectHideFlags: 0

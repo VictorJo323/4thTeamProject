@@ -31,6 +31,17 @@ public class ProjectileManager : MonoBehaviour
         obj.SetActive(true);
     }
 
+    public void BerserkShoot(Vector2 startPostiion, Vector2 direction, RangedAttackData attackData)
+    {
+        GameObject obj = objectPool.SpawnFromPool(attackData.bulletNameTag2);
+
+        obj.transform.position = startPostiion;
+        RangedAttackController attackController = obj.GetComponent<RangedAttackController>();
+        attackController.InitializeAttack(direction, attackData, this);
+
+        obj.SetActive(true);
+    }
+
     public void CreateImpactParticlesAtPostion(Vector3 position, RangedAttackData attackData)
     {
         _impactParticleSystem.transform.position = position;

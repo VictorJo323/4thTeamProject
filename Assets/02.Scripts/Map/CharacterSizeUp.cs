@@ -8,7 +8,8 @@ public class CharacterSizeUp : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Camera mainCamera;
 
-    private DownCharacterController controller;
+    private TopDownCharacterController controller;
+    private CharacterStats characterStats;
 
     private bool sizeUpTrigger = false;
 
@@ -21,7 +22,7 @@ public class CharacterSizeUp : MonoBehaviour
     {
         if (!sizeUpTrigger && collision.CompareTag("Player"))
         {
-            controller = collision.GetComponent<DownCharacterController>();
+            controller = collision.GetComponent<TopDownCharacterController>();
             CameraSizeUp();
             PlayerSizeUp();
             sizeUpTrigger = true;
@@ -36,7 +37,7 @@ public class CharacterSizeUp : MonoBehaviour
         {
             player.transform.localScale = new Vector2(newSize, newSize);
 
-            controller.speed = 2.9f;
+            characterStats.spd = 2.9f;
             Debug.Log("Ä¿Áø´Ù");
             sizeUpTrigger = false;
         }

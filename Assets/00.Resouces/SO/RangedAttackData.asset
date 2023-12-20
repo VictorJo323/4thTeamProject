@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charName: Player
   hp: 100
-  stamina: 100
-  atk: 1
+  atk: 20
   def: 1
-  spd: 5
+  spd: 20
   atksp: 0.1
   crit: 1
   target:
@@ -27,6 +26,7 @@ MonoBehaviour:
   knockbackPower: 1
   knockbackTime: 0.01
   bulletNameTag: Arrow
+  bulletNameTag2: 
   duration: 5
   spread: 4
   numberofProjectilesPerShot: 1

@@ -7,6 +7,7 @@ public class RangedAttackData : CharacterSO
 {
     [Header("Ranged Attack Data")]
     public string bulletNameTag;
+    public string bulletNameTag2;
     public float duration;
     public float spread;
     public int numberofProjectilesPerShot;

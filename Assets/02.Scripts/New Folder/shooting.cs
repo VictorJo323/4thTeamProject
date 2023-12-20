@@ -1,7 +1,9 @@
 using Cainos.PixelArtTopDown_Basic;
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Shooting : MonoBehaviour
 {
@@ -9,10 +11,13 @@ public class Shooting : MonoBehaviour
 
     [SerializeField] private Transform projectileSpawnPosition;
     [SerializeField] private Transform projectileSpawnPositionR;
+    [SerializeField] private Transform playerTransform;
 
     private Vector2 _aimDirection = Vector2.right;
 
     private ProjectileManager _projectileManager;
+
+    private bool isTwo;
 
     private void Awake()
     {
@@ -22,6 +27,7 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isTwo = true;
         _projectileManager = ProjectileManager.instance;
         _controller.OnAttackEvent += OnShoot;
         _controller.OnLookEvent += OnAim;
@@ -47,6 +53,11 @@ public class Shooting : MonoBehaviour
             float randomSpread = Random.Range(-rangedAttackData.spread, rangedAttackData.spread);
             angle += randomSpread;
             CreateProjectile(rangedAttackData, angle);
+
+            if (isTwo)
+            {
+                CreateProjectileTwo(rangedAttackData, angle);
+            }    
         }
     }
 
@@ -54,6 +65,15 @@ public class Shooting : MonoBehaviour
     {
         _projectileManager.ShootBullet(
                 projectileSpawnPosition.position,
+                RotateVector2(_aimDirection, angle),
+                rangedAttackData
+                );
+    }
+
+    private void CreateProjectileTwo(RangedAttackData rangedAttackData, float angle)
+    {
+        _projectileManager.BerserkShoot(
+                projectileSpawnPositionR.position,
                 RotateVector2(_aimDirection, angle),
                 rangedAttackData
                 );

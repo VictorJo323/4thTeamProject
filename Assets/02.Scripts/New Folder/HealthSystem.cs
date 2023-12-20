@@ -79,6 +79,7 @@ public class HealthSystem : MonoBehaviour
     {
         OnDeath?.Invoke();
     }
+
     public float GetPercentage()
     {
         return CurrentHealth / MaxHealth;
