@@ -29,4 +29,4 @@ MonoBehaviour:
   spd: 2
   atksp: 1
   crit: 10
-  atkRange: 15
+  atkRange: 20

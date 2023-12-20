@@ -26,6 +26,6 @@ MonoBehaviour:
   str: 12
   def: 0
   spd: 0
-  atksp: 0
+  atksp: 2
   crit: 0
   atkRange: 20

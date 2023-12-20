@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb78ef956ec16444b00663ebff5d54d, type: 3}
   m_Name: Item_C004
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  itemName: 
-  icon: {fileID: -1019643488, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}
-  description: 
+  prefab: {fileID: 12719677486863614, guid: 0eb76d2a15b620943be0a3c87fa1e220, type: 3}
+  itemName: "\uC5F4\uC1E0"
+  icon: {fileID: -2014925542, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}
+  description: "\uC0C1\uC790\uB97C \uC5F4 \uB54C \uD544\uC694\uD558\uB2E4."
   price: 0
   itemType: 3
   isStackable: 1
