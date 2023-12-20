@@ -90,11 +90,11 @@ GameObject:
   - component: {fileID: 4838354937654469078}
   - component: {fileID: 1676060362105374660}
   - component: {fileID: 67994589643674946}
-  - component: {fileID: 3191046402301549838}
   - component: {fileID: 8134564871668487900}
   - component: {fileID: 6529209811393206340}
   - component: {fileID: 5375525553835179932}
   - component: {fileID: 5979121869724390348}
+  - component: {fileID: 7668174687637326785}
   m_Layer: 8
   m_Name: Ogre_boss
   m_TagString: Untagged
@@ -224,18 +224,6 @@ MonoBehaviour:
   followRange: 20
   targetTag: Player
   characterRenderer: {fileID: 8230461877819711120}
---- !u!114 &3191046402301549838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303257388603324851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 010e047727e59f34d801b7738da91b1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8134564871668487900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,6 +305,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e428ac0bd7ac7544a870645f6aff4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7668174687637326785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303257388603324851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010e047727e59f34d801b7738da91b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6223513984960788660

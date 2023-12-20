@@ -563,7 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 15
+    maxHealth: 10
     spd: 0
     characterSO: {fileID: 11400000, guid: f2143053e8905d74b9781e9d35ba62a4, type: 2}
   statsModifiers: []
