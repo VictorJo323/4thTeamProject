@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c59151c82ac50d54dad1dc583916fdde, type: 3}
-  m_Name: orc_shaman
+  m_Name: RangedAttackData
   m_EditorClassIdentifier: 
-  charName: 
+  charName: Player
   hp: 1
   atk: 1
   def: 1
-  spd: 1
+  spd: 5
   atksp: 0.1
   crit: 1
   target:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
   isOnKnockback: 1
   knockbackPower: 1
-  knockbackTime: 1
-  bulletNameTag: 
-  duration: 10
-  spread: 1
+  knockbackTime: 0.01
+  bulletNameTag: Arrow
+  duration: 5
+  spread: 4
   numberofProjectilesPerShot: 1
-  multipleProjectilesAngel: 1
+  multipleProjectilesAngel: 7
   projectileColor: {r: 1, g: 1, b: 1, a: 1}
-  speed: 10
+  speed: 20
   size: 1

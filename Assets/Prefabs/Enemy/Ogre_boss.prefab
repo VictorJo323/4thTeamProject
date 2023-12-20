@@ -92,11 +92,11 @@ GameObject:
   - component: {fileID: 67994589643674946}
   - component: {fileID: 3191046402301549838}
   - component: {fileID: 8134564871668487900}
-  - component: {fileID: 3857250968191849706}
   - component: {fileID: 5550802673643075875}
-  - component: {fileID: 510704464578248418}
+  - component: {fileID: 6529209811393206340}
+  - component: {fileID: 5375525553835179932}
   m_Layer: 8
-  m_Name: zombie
+  m_Name: Ogre_boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4303257388603324851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.551, y: 0, z: 0}
+  m_LocalPosition: {x: -7.06, y: -1.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -162,7 +162,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 2, y: 2.5}
   m_EdgeRadius: 0
 --- !u!50 &4838354937654469078
 Rigidbody2D:
@@ -206,7 +206,7 @@ MonoBehaviour:
   baseStats:
     statsChangeType: 2
     maxHealth: 3
-    spd: 0
+    spd: 20
     characterSO: {fileID: 11400000, guid: 7073b12b6573abb469884fdf4d81ec24, type: 2}
   statsModifiers: []
 --- !u!114 &67994589643674946
@@ -248,8 +248,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3389d64df6eaa1140868c3dddf28849d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &3857250968191849706
-CircleCollider2D:
+--- !u!114 &5550802673643075875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303257388603324851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &6529209811393206340
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -281,21 +293,19 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &5550802673643075875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303257388603324851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &510704464578248418
+  m_Size: {x: 2, y: 2.5}
+  m_EdgeRadius: 0
+--- !u!114 &5375525553835179932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,7 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8612997087368164196}
   - component: {fileID: 8230461877819711120}
-  - component: {fileID: 425346984922757956}
+  - component: {fileID: 3667039451884612847}
   m_Layer: 8
   m_Name: MainSprite
   m_TagString: Untagged
@@ -411,8 +421,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6227008162901743591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.43, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4259821874731209815}
@@ -459,7 +469,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1a5555d03468a0043a7cfc4c4110726f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a95883d1c8f1af4dbd01604f25db3db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -470,7 +480,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &425346984922757956
+--- !u!95 &3667039451884612847
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -480,7 +490,7 @@ Animator:
   m_GameObject: {fileID: 6227008162901743591}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0e05786b155c1f94f97ee186d951cdb2, type: 2}
+  m_Controller: {fileID: 9100000, guid: ba71428bbe0f4384fb507c8e8d20ee4d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

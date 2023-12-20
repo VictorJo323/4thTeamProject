@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1477250739196791111}
   - component: {fileID: 1982276764545845110}
   m_Layer: 8
-  m_Name: HealthCanvas (1)
+  m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -447,10 +447,10 @@ GameObject:
   - component: {fileID: 2446172376205724188}
   - component: {fileID: 1781561555267219204}
   - component: {fileID: 3031032766963009034}
-  - component: {fileID: 4758831279394479455}
   - component: {fileID: 2296882058144209080}
   - component: {fileID: 4016554045719951161}
   - component: {fileID: 43843083721141185}
+  - component: {fileID: 4383393579131499422}
   m_Layer: 0
   m_Name: Orc_Shaman
   m_TagString: Untagged
@@ -474,7 +474,7 @@ Transform:
   - {fileID: 6705929214374937007}
   - {fileID: 7346955688333359151}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8680375673330948955
 Rigidbody2D:
@@ -488,7 +488,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -578,9 +578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4039f90acc85e84dbf4bbe385886e93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMapName: 
   followRange: 15
-  shootRange: 3
+  shootRange: 5
   characterRenderer: {fileID: 2320770194043613587}
 --- !u!114 &3031032766963009034
 MonoBehaviour:
@@ -595,20 +594,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 7868168331298100514}
---- !u!114 &4758831279394479455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5132125384717883609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f72f2c882da3f094f89174f25b6cfbcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
-  uiBar: {fileID: 533109229921534818}
 --- !u!114 &2296882058144209080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,6 +630,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4383393579131499422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132125384717883609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
+  uiBar: {fileID: 533109229921534818}
 --- !u!1 &7542573458036027130
 GameObject:
   m_ObjectHideFlags: 0
