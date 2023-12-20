@@ -20,7 +20,7 @@ MonoBehaviour:
   itemType: 3
   isStackable: 1
   isUnique: 0
-  maxQuantity: 99
+  maxQuantity: 9
   itemID: 3
   hp: 0
   str: 0

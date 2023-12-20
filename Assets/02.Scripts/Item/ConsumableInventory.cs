@@ -19,33 +19,45 @@ public class ConsumableInventory : MonoBehaviour
 {
     public InventorySlot[] slots = new InventorySlot[4];
 
-    public void AddConsumable(ItemSO newConsumable)
+    public bool AddConsumable(ItemSO newConsumable)
     {
         if (newConsumable.isStackable)
         {
             int consumableSlot = GetSlot(newConsumable.itemID);
             if(consumableSlot  == -1)
             {
-                return;
+                return false ;
             }
 
             if (slots[consumableSlot] == null)
             {
-                slots[consumableSlot] = new InventorySlot(newConsumable, 0);
-            }
-            InventorySlot slot = slots[consumableSlot];
-            if (slot.item.itemID == newConsumable.itemID)
-            {
-                if (slot.quantity < newConsumable.maxQuantity)
-                {
-                    slot.quantity++;
-                }
+                slots[consumableSlot] = new InventorySlot(newConsumable, 1);
+                return true;
             }
             else
-            {
-                //TODO
+            { 
+                InventorySlot slot = slots[consumableSlot];
+                if (slot.item.itemID == newConsumable.itemID)
+                {
+                    if (slot.quantity < newConsumable.maxQuantity)
+                    {
+                        slot.quantity++;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
             }
-
+        }
+        else
+        { 
+            return false;
         }
     }
 
@@ -106,29 +118,19 @@ public class ConsumableInventory : MonoBehaviour
         return false; // 열쇠가 없으면 false 반환
     }
 
+
+
     private int healthPotionID = 1;
     private int healthPotionCount;
     public bool UseHealthPotion()
     {
-        // 포션의 수량을 확인하고 사용합니다.
-        if (GetPotionCount(healthPotionID) > 0)
+        int slotIndex = GetSlot(healthPotionID);
+        if (slotIndex != -1 && slots[slotIndex] != null && slots[slotIndex].quantity > 0)
         {
-            DecreasePotionCount(healthPotionID);
+            slots[slotIndex].quantity--;
+            ShowConsumableInventory.Instance?.UpdateConsumableInventoryUI();
             return true;
         }
         return false;
-    }
-
-    private void DecreasePotionCount(int potionID)
-    {
-        // 포션 수량 감소 로직
-        healthPotionCount--;
-        ShowConsumableInventory.Instance?.UpdateConsumableInventoryUI();
-    }
-
-    private int GetPotionCount(int potionID)
-    {
-        // 포션 수량 반환 로직
-        return healthPotionCount;
     }
 }

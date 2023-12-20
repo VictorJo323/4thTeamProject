@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8443537339325408481}
   - component: {fileID: 7945848950987260784}
   - component: {fileID: 8110157717541363241}
+  - component: {fileID: 545807059852905755}
   m_Layer: 0
   m_Name: WeaponW002
   m_TagString: Untagged
@@ -107,6 +108,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 917c2f731b2df8c4ea87b481dadb7f90, type: 2}
   weaponPrefab: {fileID: 4692104875191129204}
+--- !u!50 &545807059852905755
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4692104875191129204}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5016633415974743423
 GameObject:
   m_ObjectHideFlags: 0

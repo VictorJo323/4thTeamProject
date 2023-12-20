@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 952981996167169029}
   - component: {fileID: 1101073470212350972}
   - component: {fileID: 4668142561584736269}
+  - component: {fileID: 7051388392158079345}
   m_Layer: 0
   m_Name: ConsumableC004
   m_TagString: Untagged
@@ -93,6 +94,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   consumableData: {fileID: 11400000, guid: acfc17a411b8c5b42b0b34647988e297, type: 2}
   consumablePrefab: {fileID: 12719677486863614}
+--- !u!50 &7051388392158079345
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12719677486863614}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2098917974193558984
 GameObject:
   m_ObjectHideFlags: 0

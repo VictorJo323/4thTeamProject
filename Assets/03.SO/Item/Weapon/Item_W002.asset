@@ -24,8 +24,8 @@ MonoBehaviour:
   itemID: 0
   hp: 0
   str: 3
-  def: 1
-  spd: 2
-  atksp: 5
+  def: 2
+  spd: 0
+  atksp: 0
   crit: 0
   atkRange: 0
