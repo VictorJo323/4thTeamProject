@@ -21,7 +21,7 @@ MonoBehaviour:
   crit: 1
   target:
     serializedVersion: 2
-    m_Bits: 0
-  isOnKnockback: 0
-  knockbackPower: 0
-  knockbackTime: 0
+    m_Bits: 128
+  isOnKnockback: 1
+  knockbackPower: 2
+  knockbackTime: 1

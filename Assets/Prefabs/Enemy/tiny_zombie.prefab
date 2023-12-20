@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 67994589643674946}
   - component: {fileID: 3191046402301549838}
   - component: {fileID: 8134564871668487900}
-  - component: {fileID: 3857250968191849706}
   - component: {fileID: 5550802673643075875}
   - component: {fileID: 2680347139459123375}
+  - component: {fileID: 31699813349115042}
   m_Layer: 8
   m_Name: tiny_zombie
   m_TagString: Untagged
@@ -117,7 +117,7 @@ Transform:
   - {fileID: 8612997087368164196}
   - {fileID: 2974736661881980775}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &45518036156214016
 BoxCollider2D:
@@ -248,8 +248,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3389d64df6eaa1140868c3dddf28849d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!58 &3857250968191849706
-CircleCollider2D:
+--- !u!114 &5550802673643075875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303257388603324851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2680347139459123375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303257388603324851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0
+  uiBar: {fileID: 1389102986105050937}
+--- !u!61 &31699813349115042
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -281,34 +307,18 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!114 &5550802673643075875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303257388603324851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2680347139459123375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303257388603324851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0
-  uiBar: {fileID: 1389102986105050937}
+  m_Size: {x: 0.6, y: 0.6}
+  m_EdgeRadius: 0
 --- !u!1 &6223513984960788660
 GameObject:
   m_ObjectHideFlags: 0
