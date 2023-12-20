@@ -20,8 +20,7 @@ public class StamianSystem : MonoBehaviour
     private void Awake()
     {
         _statsHandler = GetComponent<CharacterStatsHandler>();        
-        CurrentStamina = MaxStamina; // 스태미너 초기값 설정
-        
+        CurrentStamina = MaxStamina; // 스태미너 초기값 설정   
     }
 
     private void Update()
@@ -29,7 +28,6 @@ public class StamianSystem : MonoBehaviour
         UpdateStamina();
         if (uiBar != null) // UI 바가 할당되어 있는 경우에만 업데이트
             uiBar.value = GetPercentage();
-        
         
         if (Input.GetKeyDown(KeyCode.LeftShift)&&CanUseDodge())
         {
