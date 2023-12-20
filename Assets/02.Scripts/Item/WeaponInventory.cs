@@ -77,4 +77,17 @@ public class WeaponInventory : MonoBehaviour
             ShowWeaponInventory.Instance.UpdateInventoryImage();
         }
     }
+
+
+    public ItemSO GetWeaponInUse()
+    {
+        if(weapons[0] != null)
+        {
+            return weapons[0].weaponData;
+        }
+        else
+        {
+            return null;
+        }
+    }
 }

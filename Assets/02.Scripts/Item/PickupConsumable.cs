@@ -17,9 +17,12 @@ public class PickupConsumable : MonoBehaviour
             if (playerConsumable != null)
             {
                 // 소모품 인벤토리에 추가
-                playerConsumable.AddConsumable(consumableData);
+                bool added = playerConsumable.AddConsumable(consumableData);
                 ShowConsumableInventory.Instance?.UpdateConsumableInventoryUI();
-                Destroy(gameObject);
+                if (added)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
