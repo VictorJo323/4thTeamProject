@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputController : TopDownCharacterController
 {
+    public string currentMapName;
     // Start is called before the first frame update
     private Camera _camera;
     public float dodgeDistance = 2f;
