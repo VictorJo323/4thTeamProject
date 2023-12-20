@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6377129994431415962}
   - component: {fileID: 6108249828396387408}
   - component: {fileID: 6155398858200280894}
+  - component: {fileID: 7713521541920346169}
   m_Layer: 0
   m_Name: ConsumableC003
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648521594599982895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -93,6 +94,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   consumableData: {fileID: 11400000, guid: 56f12168882801a42a7c4ba9546a9088, type: 2}
   consumablePrefab: {fileID: 648521594599982895}
+--- !u!50 &7713521541920346169
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648521594599982895}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8823371142363398971
 GameObject:
   m_ObjectHideFlags: 0

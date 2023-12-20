@@ -13,17 +13,19 @@ MonoBehaviour:
   m_Name: Item_W002
   m_EditorClassIdentifier: 
   prefab: {fileID: 4692104875191129204, guid: a47b759fa6d370442a0bccfbb3f798d6, type: 3}
-  itemName: "\uB3C4\uB07C"
-  icon: {fileID: 21300000, guid: 172774604c1bee84185a69041576525b, type: 3}
-  description: "\uD3C9\uBC94\uD55C \uB3C4\uB07C"
+  itemName: "\uB9DD\uCE58"
+  icon: {fileID: 1404504090, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}
+  description: "\uAC70\uB300\uD55C \uB454\uAE30"
   price: 0
   itemType: 0
   isStackable: 0
   isUnique: 0
+  maxQuantity: 0
+  itemID: 0
   hp: 0
   str: 3
-  def: 1
-  spd: 2
-  atksp: 5
+  def: 2
+  spd: 0
+  atksp: 0
   crit: 0
   atkRange: 0

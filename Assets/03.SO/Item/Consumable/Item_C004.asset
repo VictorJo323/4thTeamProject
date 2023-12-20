@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
   itemName: 
-  icon: {fileID: 21300000, guid: 5d9ba4e7d0964044ea54abe409d81dfd, type: 3}
+  icon: {fileID: -1019643488, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}
   description: 
   price: 0
-  itemType: 0
+  itemType: 3
   isStackable: 1
   isUnique: 0
-  maxQuantity: 9
+  maxQuantity: 99
   itemID: 4
   hp: 0
   str: 0
