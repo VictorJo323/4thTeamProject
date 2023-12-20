@@ -12,24 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59151c82ac50d54dad1dc583916fdde, type: 3}
   m_Name: RangedAttackData
   m_EditorClassIdentifier: 
-  charName: 
-  hp: 0
-  atk: 0
-  def: 0
-  spd: 0
-  atksp: 0
-  crit: 0
+  charName: Player
+  hp: 1
+  atk: 1
+  def: 1
+  spd: 5
+  atksp: 0.1
+  crit: 1
   target:
     serializedVersion: 2
-    m_Bits: 0
-  isOnKnockback: 0
-  knockbackPower: 0
-  knockbackTime: 0
-  bulletNameTag: 
-  duration: 0
-  spread: 0
-  numberofProjectilesPerShot: 0
-  multipleProjectilesAngel: 0
-  projectileColor: {r: 0, g: 0, b: 0, a: 0}
-  speed: 0
-  size: 0
+    m_Bits: 256
+  isOnKnockback: 1
+  knockbackPower: 1
+  knockbackTime: 0.01
+  bulletNameTag: Arrow
+  duration: 5
+  spread: 4
+  numberofProjectilesPerShot: 1
+  multipleProjectilesAngel: 7
+  projectileColor: {r: 1, g: 1, b: 1, a: 1}
+  speed: 20
+  size: 1
