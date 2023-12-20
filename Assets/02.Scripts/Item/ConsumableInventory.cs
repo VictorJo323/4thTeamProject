@@ -15,8 +15,15 @@ public class InventorySlot
         quantity = initQty;
     }
 }
+
+
 public class ConsumableInventory : MonoBehaviour
 {
+    private void Awake()
+    {
+        ShowConsumableInventory.Instance?.UpdateConsumableInventoryUI();
+
+    }
     public InventorySlot[] slots = new InventorySlot[4];
 
     public bool AddConsumable(ItemSO newConsumable)
