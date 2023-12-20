@@ -23,6 +23,8 @@ public class ConsumableInventory : MonoBehaviour
     {
         ShowConsumableInventory.Instance?.UpdateConsumableInventoryUI();
     }
+
+
     public InventorySlot[] slots = new InventorySlot[4];
 
     public bool AddConsumable(ItemSO newConsumable)
@@ -30,9 +32,9 @@ public class ConsumableInventory : MonoBehaviour
         if (newConsumable.isStackable)
         {
             int consumableSlot = GetSlot(newConsumable.itemID);
-            if(consumableSlot  == -1)
+            if (consumableSlot == -1)
             {
-                return false ;
+                return false;
             }
 
             if (slots[consumableSlot] == null)
@@ -41,7 +43,7 @@ public class ConsumableInventory : MonoBehaviour
                 return true;
             }
             else
-            { 
+            {
                 InventorySlot slot = slots[consumableSlot];
                 if (slot.item.itemID == newConsumable.itemID)
                 {
@@ -62,7 +64,7 @@ public class ConsumableInventory : MonoBehaviour
             }
         }
         else
-        { 
+        {
             return false;
         }
     }
@@ -122,21 +124,5 @@ public class ConsumableInventory : MonoBehaviour
             return true;
         }
         return false; // 열쇠가 없으면 false 반환
-    }
-
-
-
-    private int healthPotionID = 1;
-    private int healthPotionCount;
-    public bool UseHealthPotion()
-    {
-        int slotIndex = GetSlot(healthPotionID);
-        if (slotIndex != -1 && slots[slotIndex] != null && slots[slotIndex].quantity > 0)
-        {
-            slots[slotIndex].quantity--;
-            ShowConsumableInventory.Instance?.UpdateConsumableInventoryUI();
-            return true;
-        }
-        return false;
     }
 }

@@ -5,25 +5,61 @@ using UnityEngine;
 public class ItemUsageController : MonoBehaviour
 {
     public ConsumableInventory consumableInventory;
-    private float healthPotionCooldown = 15f;
-    private bool canUseHealthPotion = true;
+    public CharacterStatsHandler characterStats;
+    public HealthSystem healthSystem;
 
-    public void UseHealthPotion(int healthRecoveryAmount)
+    private Dictionary<int, float> lastUseTimes = new Dictionary<int, float>();
+    private Dictionary<int, float> itemCooldowns = new Dictionary<int, float>()
     {
-        if (canUseHealthPotion && consumableInventory.UseHealthPotion())
+        { 1, 10.0f },
+        { 2, 10.0f }
+    };
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            // 체력 회복 로직
-            Debug.Log($"Recovered {healthRecoveryAmount} health.");
-            StartCoroutine(HealthPotionCooldown());
+            UseItem(1); // 1번 아이템 사용
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            UseItem(2); // 2번 아이템 사용
         }
     }
 
-    private IEnumerator HealthPotionCooldown()
+    private void UseItem(int itemID)
     {
-        canUseHealthPotion = false;
-        yield return new WaitForSeconds(healthPotionCooldown);
-        canUseHealthPotion = true;
+        if (!CanUseItem(itemID))
+            return;
+
+        InventorySlot slot = consumableInventory.slots[itemID - 1];
+        if (slot != null && slot.quantity > 0)
+        {
+            ApplyItemEffect(slot.item);
+            slot.quantity--;
+            lastUseTimes[itemID] = Time.time;
+            ShowConsumableInventory.Instance?.UpdateConsumableInventoryUI();
+        }
     }
 
-    // 기타 아이템 사용 메서드...
+    private bool CanUseItem(int itemID)
+    {
+        if (!lastUseTimes.ContainsKey(itemID))
+            lastUseTimes[itemID] = 0;
+
+        return Time.time >= lastUseTimes[itemID] + itemCooldowns[itemID];
+    }
+
+    private void ApplyItemEffect(ItemSO item)
+    {
+        switch (item.itemID)
+        {
+            case 1:
+                healthSystem.ChangeHealth(20); // 20 체력 회복
+                break;
+            // 다른 아이템 효과에 대한 처리...
+            case 2:
+                break;
+        }
+    }
 }
