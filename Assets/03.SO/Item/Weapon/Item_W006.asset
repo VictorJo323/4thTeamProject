@@ -10,22 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bcb78ef956ec16444b00663ebff5d54d, type: 3}
-  m_Name: Item_W002
+  m_Name: Item_W006
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4692104875191129204, guid: a47b759fa6d370442a0bccfbb3f798d6, type: 3}
-  itemName: "\uB9DD\uCE58"
-  icon: {fileID: 1404504090, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}
-  description: "\uAC70\uB300\uD55C \uB454\uAE30"
+  prefab: {fileID: 3479424129758610923, guid: b6dc1edafa62fde46aa866eda2b9bae0, type: 3}
+  itemName: "\uC591\uB0A0\uB3C4\uB07C"
+  icon: {fileID: -1216526960, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}
+  description: "\uC55E\uB4A4\uB85C \uBB34\uC2DC\uBB34\uC2DC\uD55C \uB0A0\uC774 \uBD99\uC740
+    \uB3C4\uB07C. \uD718\uB450\uB974\uBA74 \uBD95\uBD95 \uC18C\uB9AC\uAC00 \uB09C\uB2E4."
   price: 0
   itemType: 0
   isStackable: 0
   isUnique: 0
   maxQuantity: 0
   itemID: 0
-  hp: 0
-  str: 3
-  def: 2
+  hp: 15
+  str: 15
+  def: 0
   spd: 0
-  atksp: 1
+  atksp: 0.8
   crit: 0
-  atkRange: 3
+  atkRange: 2

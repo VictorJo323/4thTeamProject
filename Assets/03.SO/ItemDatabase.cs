@@ -18,4 +18,17 @@ public class ItemDatabase : ScriptableObject
         }
         return null;
     }
+
+    public List<ItemSO> GetItemsByType(Type itemType)
+    {
+        List<ItemSO> filteredItems = new List<ItemSO>();
+        foreach (ItemSO item in items)
+        {
+            if (item.itemType == itemType)
+            {
+                filteredItems.Add(item);
+            }
+        }
+        return filteredItems;
+    }
 }
