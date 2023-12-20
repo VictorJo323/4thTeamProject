@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 67994589643674946}
   - component: {fileID: 3191046402301549838}
   - component: {fileID: 8134564871668487900}
-  - component: {fileID: 5550802673643075875}
   - component: {fileID: 6529209811393206340}
   - component: {fileID: 5375525553835179932}
+  - component: {fileID: 5979121869724390348}
   m_Layer: 8
   m_Name: Ogre_boss
   m_TagString: Untagged
@@ -204,10 +204,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats:
-    statsChangeType: 2
-    maxHealth: 3
-    spd: 20
-    characterSO: {fileID: 11400000, guid: 7073b12b6573abb469884fdf4d81ec24, type: 2}
+    statsChangeType: 0
+    maxHealth: 100
+    spd: 1
+    characterSO: {fileID: 11400000, guid: b8947536373fe5449aea576074bf3ccb, type: 2}
   statsModifiers: []
 --- !u!114 &67994589643674946
 MonoBehaviour:
@@ -246,18 +246,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3389d64df6eaa1140868c3dddf28849d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5550802673643075875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303257388603324851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &6529209811393206340
@@ -317,8 +305,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
+  healthChangeDelay: 0
   uiBar: {fileID: 1389102986105050937}
+--- !u!114 &5979121869724390348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303257388603324851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e428ac0bd7ac7544a870645f6aff4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6223513984960788660
 GameObject:
   m_ObjectHideFlags: 0
