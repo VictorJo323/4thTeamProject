@@ -24,7 +24,7 @@ MonoBehaviour:
     m_Bits: 256
   isOnKnockback: 1
   knockbackPower: 1
-  knockbackTime: 0.01
+  knockbackTime: 1
   bulletNameTag: Arrow
   duration: 5
   spread: 4

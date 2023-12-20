@@ -117,7 +117,7 @@ Transform:
   - {fileID: 8612997087368164196}
   - {fileID: 2974736661881980775}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &45518036156214016
 BoxCollider2D:
@@ -206,7 +206,7 @@ MonoBehaviour:
   baseStats:
     statsChangeType: 0
     maxHealth: 3
-    spd: 1.2
+    spd: 5.01
     characterSO: {fileID: 11400000, guid: c8c96ebce0f4cc145b02b2010fd3b4c7, type: 2}
   statsModifiers: []
 --- !u!114 &67994589643674946
