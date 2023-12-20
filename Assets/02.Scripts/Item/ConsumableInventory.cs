@@ -19,10 +19,9 @@ public class InventorySlot
 
 public class ConsumableInventory : MonoBehaviour
 {
-    private void Awake()
+    private void Start()
     {
         ShowConsumableInventory.Instance?.UpdateConsumableInventoryUI();
-
     }
     public InventorySlot[] slots = new InventorySlot[4];
 
