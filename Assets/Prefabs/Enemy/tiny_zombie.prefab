@@ -92,9 +92,9 @@ GameObject:
   - component: {fileID: 67994589643674946}
   - component: {fileID: 3191046402301549838}
   - component: {fileID: 8134564871668487900}
-  - component: {fileID: 5550802673643075875}
   - component: {fileID: 2680347139459123375}
   - component: {fileID: 31699813349115042}
+  - component: {fileID: 2869960517397425052}
   m_Layer: 8
   m_Name: tiny_zombie
   m_TagString: Untagged
@@ -248,18 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3389d64df6eaa1140868c3dddf28849d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5550802673643075875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303257388603324851}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2680347139459123375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +307,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &2869960517397425052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303257388603324851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e428ac0bd7ac7544a870645f6aff4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6223513984960788660
 GameObject:
   m_ObjectHideFlags: 0
