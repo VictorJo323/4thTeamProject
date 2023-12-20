@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class WeaponInventory : MonoBehaviour
 {
+    public event Action<ItemSO> OnWeaponChanged;
+
     public Weapon[] weapons = new Weapon[2];
     public ItemDatabase itemDatabase;
     public Transform dropPoint;
@@ -14,40 +16,43 @@ public class WeaponInventory : MonoBehaviour
         if (weapons[0] == null)
         {
             weapons[0] = newWeapon;
-            Debug.Log("1¹ø¿¡ Ãß°¡ " + newWeapon.weaponData.itemName);
+            Debug.Log("1ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ " + newWeapon.weaponData.itemName);
+
         }
         else if (weapons[1] == null)
         {
             weapons[1] = newWeapon;
-            Debug.Log("2¹ø¿¡ Ãß°¡ " + newWeapon.weaponData.itemName);
+            Debug.Log("2ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ " + newWeapon.weaponData.itemName);
         }
         else
         {
-            // ¸ÕÀú µå·ÓÇÒ ¾ÆÀÌÅÛÀÇ µ¥ÀÌÅÍ¸¦ º¹»çÇÏ°í µå·Ó ¿ÀºêÁ§Æ®¸¦ »ý¼ºÇÕ´Ï´Ù.
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
             ItemSO dataToDrop = weapons[1].weaponData;
             DropUnselectedWeapon(weapons[1]);
             CreateDroppedWeapon(dataToDrop);
-            // ±× ÈÄ¿¡ ÀÎº¥Åä¸® ½½·ÔÀ» »õ ¾ÆÀÌÅÛÀ¸·Î ¾÷µ¥ÀÌÆ®ÇÕ´Ï´Ù.
-            Debug.Log("¾ÆÀÌÅÛ ¹ö¸² " + weapons[1].weaponData.itemName);
+            // ï¿½ï¿½ ï¿½Ä¿ï¿½ ï¿½Îºï¿½ï¿½ä¸® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½Õ´Ï´ï¿½.
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ " + weapons[1].weaponData.itemName);
             weapons[1] = newWeapon;
-            Debug.Log("2¹ø¿¡ Ãß°¡ " + newWeapon.weaponData.itemName);
+            Debug.Log("2ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ " + newWeapon.weaponData.itemName);
         }
 
         if (ShowWeaponInventory.Instance != null)
         {
             ShowWeaponInventory.Instance.UpdateInventoryImage();
+            OnWeaponChanged?.Invoke(newWeapon.weaponData);
+
         }
     }
 
     private void CreateDroppedWeapon(ItemSO dataToDrop)
     {
-        // µå·ÓÇÒ ¹«±âÀÇ ÇÁ¸®ÆÕÀ» Ã£½À´Ï´Ù.
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ï¿½Ï´ï¿½.
         GameObject weaponPrefab = dataToDrop.prefab; 
 
-        // µå·ÓÇÒ ¹«±âÀÇ »õ ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÕ´Ï´Ù.
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
         GameObject droppedWeaponObject = Instantiate(weaponPrefab, dropPoint.position, Quaternion.identity);
 
-        // µå·ÓµÈ ¾ÆÀÌÅÛ¿¡ ´ëÇÑ PickupWeapon ÄÄÆ÷³ÍÆ®¸¦ ¼³Á¤ÇÕ´Ï´Ù.
+        // ï¿½ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Û¿ï¿½ ï¿½ï¿½ï¿½ï¿½ PickupWeapon ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
         PickupWeapon pickupComponent = droppedWeaponObject.GetComponent<PickupWeapon>();
         if (pickupComponent != null)
         {
@@ -57,7 +62,7 @@ public class WeaponInventory : MonoBehaviour
 
     private void DropUnselectedWeapon(Weapon dropWeapon)
     {
-        // ÀÎº¥Åä¸®¿¡¼­ ¹«±â¸¦ Á¦°ÅÇÕ´Ï´Ù.
+        // ï¿½Îºï¿½ï¿½ä¸®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½â¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
         Destroy(dropWeapon.gameObject);
     }
 
@@ -73,8 +78,9 @@ public class WeaponInventory : MonoBehaviour
             Weapon temp = weapons[0];
             weapons[0] = weapons[1];
             weapons[1] = temp;
-            Debug.Log("1½½·Ô: " + weapons[0].name + "  2½½·Ô: " + weapons[1].name);
+            Debug.Log("1ï¿½ï¿½ï¿½ï¿½: " + weapons[0].name + "  2ï¿½ï¿½ï¿½ï¿½: " + weapons[1].name);
             ShowWeaponInventory.Instance.UpdateInventoryImage();
+            OnWeaponChanged?.Invoke(weapons[0].weaponData);
         }
     }
 

@@ -9,6 +9,7 @@ public class CharacterSO : ScriptableObject
     [Header("Character Info")]
     public string charName;
     public int hp;
+    public int stamina;
     public int atk;
     public int def;
     public float spd;
