@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 5550802673643075875}
   - component: {fileID: 6529209811393206340}
   - component: {fileID: 5375525553835179932}
+  - component: {fileID: 1766000134035728250}
   m_Layer: 8
   m_Name: Ogre_boss
   m_TagString: Untagged
@@ -117,7 +118,7 @@ Transform:
   - {fileID: 8612997087368164196}
   - {fileID: 2974736661881980775}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &45518036156214016
 BoxCollider2D:
@@ -204,10 +205,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats:
-    statsChangeType: 2
+    statsChangeType: 0
     maxHealth: 3
-    spd: 20
-    characterSO: {fileID: 11400000, guid: 7073b12b6573abb469884fdf4d81ec24, type: 2}
+    spd: 1.02
+    characterSO: {fileID: 11400000, guid: b8947536373fe5449aea576074bf3ccb, type: 2}
   statsModifiers: []
 --- !u!114 &67994589643674946
 MonoBehaviour:
@@ -306,6 +307,20 @@ BoxCollider2D:
   m_Size: {x: 2, y: 2.5}
   m_EdgeRadius: 0
 --- !u!114 &5375525553835179932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303257388603324851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
+  uiBar: {fileID: 1389102986105050937}
+--- !u!114 &1766000134035728250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
