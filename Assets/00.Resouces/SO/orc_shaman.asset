@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c59151c82ac50d54dad1dc583916fdde, type: 3}
   m_Name: orc_shaman
   m_EditorClassIdentifier: 
-  name: 
+  charName: 
   hp: 1
   atk: 1
   def: 1

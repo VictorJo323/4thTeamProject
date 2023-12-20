@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     private static AudioManager _instance;
 
-    public static AudioManager Instance
+    public static AudioManager instance
     {
         get
         {
@@ -25,30 +25,51 @@ public class AudioManager : MonoBehaviour
             if (_instance == null) _instance = value;
         }
     }
+    [SerializeField][Range(0f, 1f)] private float soundEffectVolume;
+    [SerializeField][Range(0f, 1f)] private float soundEffectPitchVariance;
+    [SerializeField][Range(0f, 1f)] private float musicVolume;
+    private ObjectPool objectPool;
+
+    private AudioSource musicAudioSource;
+    public AudioClip musicClip;
+
 
     private void Awake()
     {
-        //게임매니저가 없다면 현재 오브젝트를 게임매니저로
         if (_instance == null)
         {
             _instance = this;
             DontDestroyOnLoad(this);
         }
-        //게임매니저가 2개이상 스크립트로 들어가 있을시 나중에 지정받은 오브젝트 파괴
         else
         {
             if (_instance != this) Destroy(this);
         }
+        musicAudioSource = GetComponent<AudioSource>();
+        musicAudioSource.volume = musicVolume;
+        musicAudioSource.loop = true;
+
+        objectPool = GetComponent<ObjectPool>();
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        ChangeBackGroundMusic(musicClip);
     }
 
-    // Update is called once per frame
-    void Update()
+    public static void ChangeBackGroundMusic(AudioClip music)
     {
-        
+        instance.musicAudioSource.Stop();
+        instance.musicAudioSource.clip = music;
+        instance.musicAudioSource.Play();
     }
+
+    public static void PlayClip(AudioClip clip)
+    {
+        GameObject obj = instance.objectPool.SpawnFromPool("SoundSource");
+        obj.SetActive(true);
+        SoundSource soundSource = obj.GetComponent<SoundSource>();
+        soundSource.Play(clip, instance.soundEffectVolume, instance.soundEffectPitchVariance);
+    }
+
 }
