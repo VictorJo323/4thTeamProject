@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6922163827941710445, guid: 2401415c67224d341bf53e9efad19410, type: 3}
   itemName: "\uD65C"
-  icon: {fileID: 21300000, guid: 5d7061fc7da05ce44add317708ec7215, type: 3}
+  icon: {fileID: -711482027, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}
   description: "\uD3C9\uBC94\uD55C \uD65C"
   price: 0
   itemType: 1
   isStackable: 0
   isUnique: 0
+  maxQuantity: 0
+  itemID: 0
   hp: 0
   str: 5
   def: 0
