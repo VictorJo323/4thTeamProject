@@ -17,7 +17,7 @@ MonoBehaviour:
   atk: 1
   def: 1
   spd: 1
-  atksp: 0.1
+  atksp: 1
   crit: 1
   target:
     serializedVersion: 2
@@ -25,11 +25,11 @@ MonoBehaviour:
   isOnKnockback: 1
   knockbackPower: 1
   knockbackTime: 1
-  bulletNameTag: 
+  bulletNameTag: Arrow
   duration: 10
   spread: 1
   numberofProjectilesPerShot: 1
   multipleProjectilesAngel: 1
-  projectileColor: {r: 1, g: 1, b: 1, a: 1}
+  projectileColor: {r: 1, g: 0, b: 0, a: 1}
   speed: 10
   size: 1
