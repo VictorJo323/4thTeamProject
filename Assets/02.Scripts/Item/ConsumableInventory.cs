@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-
 public class InventorySlot
 {
     public ItemSO item;
@@ -105,5 +104,31 @@ public class ConsumableInventory : MonoBehaviour
             return true;
         }
         return false; // 열쇠가 없으면 false 반환
+    }
+
+    private int healthPotionID = 1;
+    private int healthPotionCount;
+    public bool UseHealthPotion()
+    {
+        // 포션의 수량을 확인하고 사용합니다.
+        if (GetPotionCount(healthPotionID) > 0)
+        {
+            DecreasePotionCount(healthPotionID);
+            return true;
+        }
+        return false;
+    }
+
+    private void DecreasePotionCount(int potionID)
+    {
+        // 포션 수량 감소 로직
+        healthPotionCount--;
+        ShowConsumableInventory.Instance?.UpdateConsumableInventoryUI();
+    }
+
+    private int GetPotionCount(int potionID)
+    {
+        // 포션 수량 반환 로직
+        return healthPotionCount;
     }
 }
