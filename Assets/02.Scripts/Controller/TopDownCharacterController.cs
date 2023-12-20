@@ -9,6 +9,7 @@ public class TopDownCharacterController : MonoBehaviour
 
     public event Action<Vector2> OnMoveEvent;
     public event Action<Vector2> OnLookEvent;
+    public event Action<Vector2> OnDodgeEvent;
     public event Action<CharacterSO> OnAttackEvent;
 
     private float _timeSinceLastAttack = float.MaxValue;
@@ -51,5 +52,10 @@ public class TopDownCharacterController : MonoBehaviour
     public void CallAttackEvent(CharacterSO characterSO)
     {
         OnAttackEvent?.Invoke(characterSO);
+    }
+
+    public void CallDodgeEvent(Vector2 direction)
+    {
+        OnDodgeEvent?.Invoke(direction);
     }
 }
