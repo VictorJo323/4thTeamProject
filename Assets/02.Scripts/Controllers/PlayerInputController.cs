@@ -11,12 +11,14 @@ public class PlayerInputController : TopDownCharacterController
     private Camera _camera;
     public float dodgeDistance = 2f;
     public float dodgeSpeed = 10f;
+    StamianSystem StamianSystem;
     
-    
+
     protected override void Awake()
     {
         base.Awake();
         _camera = Camera.main;
+        StamianSystem = GetComponent<StamianSystem>();
     }
 
     public void OnMove(InputValue value)
@@ -45,12 +47,14 @@ public class PlayerInputController : TopDownCharacterController
     
     public void OnDodge()
     {
-        
+        if (StamianSystem.CurrentStamina > StamianSystem.amount) 
+        {
+            
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);   //마우스 위치를 받아서 월드포인트 좌표로 변경 / 해당 위치를 마우스포지션에 저장
             Vector2 direction = (mousePosition - (Vector2)transform.position).normalized;      // 마우스위치 - 캐릭터 위치의 벡터 정규화 (1)
             Vector2 targetPosition = (Vector2)transform.position + direction * dodgeDistance;  //  타겟 (목표지점)을 캐릭터 위치 + 방향의 벡터 정보를 더하고 회피 거리만큼으로 결정
             StartCoroutine(MoveToSpot(targetPosition));     // MoveToSpot 함수 실행
-        
+        }
         
     }
     public IEnumerator MoveToSpot(Vector2 targetPosition)
@@ -67,5 +71,6 @@ public class PlayerInputController : TopDownCharacterController
         }
         
         transform.position = targetPosition;      // 포지션을 타겟포지션으로 변경
+        
     }
 }

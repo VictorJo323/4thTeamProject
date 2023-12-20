@@ -13,7 +13,8 @@ public class StamianSystem : MonoBehaviour
 
     public float CurrentStamina { get; private set; }
     public float MaxStamina => _statsHandler != null ? _statsHandler.CurrentStats.maxStamina : 0f;
-        
+
+    
     public float recoveryInterval = 1f;
 
     private void Awake()
@@ -71,6 +72,7 @@ public class StamianSystem : MonoBehaviour
         return CurrentStamina >= amount; 
     }
 
+    
     public bool UseStaminaForDodge()
     {
         if (CanUseDodge())
