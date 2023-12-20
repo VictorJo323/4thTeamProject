@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 1954003552327393952}
   - component: {fileID: 364420698620346309}
   - component: {fileID: -4053885107762205658}
-  - component: {fileID: 7139981458809787432}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -322,19 +321,3 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   fxOnDestory: 1
---- !u!114 &7139981458809787432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747761274267078772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c8bb7bbc1f07741a00ee95608e98ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pools:
-  - tag: Arrow
-    prefab: {fileID: 747761274267078772}
-    size: 20
