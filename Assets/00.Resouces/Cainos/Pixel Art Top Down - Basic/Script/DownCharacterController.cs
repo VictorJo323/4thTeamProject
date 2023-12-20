@@ -18,6 +18,8 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private void Start()
         {
+            speed = 20f;
+
             animator = GetComponent<Animator>();
             isDead = false;
 
