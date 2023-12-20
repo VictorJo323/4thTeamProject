@@ -33,16 +33,19 @@ public class RangeEnemyController : EnemyController
                 }
                 else
                 {
+                    CallLookEvent(direction);
                     CallMoveEvent(direction);
                 }
             }
             else
             {
+                CallLookEvent(direction);
                 CallMoveEvent(direction);
             }
         }
         else
         {
+            CallLookEvent(direction);
             CallMoveEvent(direction);
         }
         Rotate(direction);

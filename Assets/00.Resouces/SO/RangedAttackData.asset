@@ -9,22 +9,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43db43206fd250a46ac21deb5d1db1a6, type: 3}
-  m_Name: Player_RangedAttackData
+  m_Script: {fileID: 11500000, guid: c59151c82ac50d54dad1dc583916fdde, type: 3}
+  m_Name: RangedAttackData
   m_EditorClassIdentifier: 
-  size: 1
-  delay: 0.15
-  power: 2
-  speed: 10
+  charName: Player
+  hp: 1
+  atk: 1
+  def: 1
+  spd: 5
+  atksp: 0.1
+  crit: 1
   target:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   isOnKnockback: 1
-  knockbackPower: 0
-  knockbackTime: 0.1
+  knockbackPower: 1
+  knockbackTime: 0.01
   bulletNameTag: Arrow
   duration: 5
   spread: 4
-  numberOfProjectilesPerShot: 1
-  multipleProjectilesAngle: 7
-  projectileColor: {r: 1, g: 1, b: 1, a: 0}
+  numberofProjectilesPerShot: 1
+  multipleProjectilesAngel: 7
+  projectileColor: {r: 1, g: 1, b: 1, a: 1}
+  speed: 20
+  size: 1

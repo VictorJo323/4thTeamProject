@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5413814064575681327}
-  - component: {fileID: 4715859876084770017}
+  - component: {fileID: 5874272341973949857}
   - component: {fileID: 194873551128248379}
   m_Layer: 0
   m_Name: ProjectileManager
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 1703622769601658593}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4715859876084770017
+--- !u!114 &5874272341973949857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2766436560015940904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8297934f944f9249ad20cccbfd0ea96, type: 3}
+  m_Script: {fileID: 11500000, guid: 57a19605d2657684385348293a1856ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _impactParticleSystem: {fileID: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: Arrow
-    prefab: {fileID: 8531087218434329074, guid: 9481c2b004fb3b447b0756b26bc02083, type: 3}
+    prefab: {fileID: 747761274267078772, guid: d0c337a98102b9a40b5c2e2c418ce503, type: 3}
     size: 20
 --- !u!1 &6914333756207356477
 GameObject:
@@ -107,3 +107,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a1b96ff4d56d244855ef3c8f4edce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTag: Player
