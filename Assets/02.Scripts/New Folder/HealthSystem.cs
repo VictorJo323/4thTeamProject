@@ -70,17 +70,22 @@ public class HealthSystem : MonoBehaviour
 
         if (CurrentHealth <= 0f)
         {
-            CallDeath();
-            Time.timeScale = 0f;
-            SceneManager.LoadScene("04.GameOver");
+            CallDeath(gameObject.CompareTag("Player"));
         }
+
 
         return true;
     }
 
-    private void CallDeath()
+    private void CallDeath(bool isPlayer)
     {
         OnDeath?.Invoke();
+
+        if (isPlayer)
+        {
+            SceneManager.LoadScene("04.GameOver");
+            Time.timeScale = 0f;
+        }
     }
 
     public float GetPercentage()
