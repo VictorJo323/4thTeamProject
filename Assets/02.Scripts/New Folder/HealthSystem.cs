@@ -68,7 +68,7 @@ public class HealthSystem : MonoBehaviour
             OnDamage?.Invoke();
         }
 
-        if (CurrentHealth <= 0f&& CompareTag("Player"))
+        if (CurrentHealth <= 0f)
         {
             CallDeath(gameObject.CompareTag("Player"));
         }
