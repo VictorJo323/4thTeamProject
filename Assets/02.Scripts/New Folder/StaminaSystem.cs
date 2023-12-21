@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StamianSystem : MonoBehaviour
+public class StaminaSystem : MonoBehaviour
 {
     private CharacterStatsHandler _statsHandler;
     public float amount = 20f;
@@ -20,8 +20,12 @@ public class StamianSystem : MonoBehaviour
     private void Awake()
     {
         _statsHandler = GetComponent<CharacterStatsHandler>();        
-        CurrentStamina = MaxStamina; // 스태미너 초기값 설정
+        _playerInputController = GetComponent<PlayerInputController>();
         
+    }
+    private void Start()
+    {
+        CurrentStamina = MaxStamina; // Start()에서 초기화
     }
 
     private void Update()
@@ -91,8 +95,6 @@ public class StamianSystem : MonoBehaviour
     public float GetPercentage()
     {
         return CurrentStamina / MaxStamina;
-    }
-
-    
+    }    
     
 }
