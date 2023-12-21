@@ -242,6 +242,7 @@ GameObject:
   - component: {fileID: 1457923874835260542}
   - component: {fileID: 3621843051973442639}
   - component: {fileID: 578895853512572615}
+  - component: {fileID: 5385795312956325963}
   m_Layer: 8
   m_Name: Orc_Shaman
   m_TagString: Untagged
@@ -385,7 +386,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 8292085496701454228}
-  projectileSpawnPositionR: {fileID: 0}
   playerTransform: {fileID: 0}
 --- !u!114 &5908107260217945452
 MonoBehaviour:
@@ -452,6 +452,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bfcafab27b74c34fb4c8c878de84e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5385795312956325963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8293111973593592572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18cc6b04f5575744895f259eb552100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDatabase: {fileID: 0}
+  dropChance: 1
 --- !u!1 &8897085548500883803
 GameObject:
   m_ObjectHideFlags: 0

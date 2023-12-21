@@ -10,6 +10,7 @@ public class MeleeAttackController : MonoBehaviour
     private float attackCooldown = 0f;
     private float lastAttackTime;
     public ParticleSystem attackTrailEffect;
+    public RangedAttackController rangedAttackController;
 
 
     private void Update()
@@ -32,7 +33,9 @@ public class MeleeAttackController : MonoBehaviour
                 }
                 else if (currentWeaponData.itemType == Type.RangedWeapon)
                 {
-                    //ToDo
+                    Vector2 direction = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
+                    //rangedAttackController.InitializeAttack(direction, currentWeaponData.rangedAttackData, /* ProjectileManager 인스턴스 */);
+
                 }
             }
         }

@@ -31,6 +31,37 @@ Transform:
   m_Father: {fileID: 1630983176988094609}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2850173097926113597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000569660139756703}
+  m_Layer: 7
+  m_Name: DropPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1000569660139756703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2850173097926113597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1697920179248880429}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3942438799813863410
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +165,10 @@ GameObject:
   - component: {fileID: 6213472994490383367}
   - component: {fileID: 7043674636056659628}
   - component: {fileID: 5081892836480894626}
+  - component: {fileID: 1205138340966537731}
+  - component: {fileID: 7885822872091649820}
+  - component: {fileID: -702821947148049706}
+  - component: {fileID: -142903341850684649}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -154,8 +189,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1630983176988094609}
+  - {fileID: 1000569660139756703}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4372734710899379571
 SpriteRenderer:
@@ -407,6 +443,73 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 1630983176988094609}
   playerTransform: {fileID: 0}
+--- !u!114 &1205138340966537731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6711734545848856461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea3d50fea682a5428ff04047c99a539, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  consumableInventory: {fileID: -142903341850684649}
+  characterStats: {fileID: 2319359292549113553}
+  healthSystem: {fileID: 7885822872091649820}
+--- !u!114 &7885822872091649820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6711734545848856461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthChangeDelay: 0.5
+  uiBar: {fileID: 0}
+--- !u!114 &-702821947148049706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6711734545848856461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb839511f9e9294089785fe03bbe58d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 0}
+  - {fileID: 0}
+  itemDatabase: {fileID: 11400000, guid: 8f7a6508eadc1eb4092a11edb43c8818, type: 2}
+  dropPoint: {fileID: 1000569660139756703}
+--- !u!114 &-142903341850684649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6711734545848856461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff047c41ef579c43943cf0dad2fbd3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - item: {fileID: 11400000, guid: 6dd0e6be9b8558f43b2a3a77892c94b2, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: beb410a79df048449948f36c867bbbe0, type: 2}
+    quantity: 0
+  - item: {fileID: 11400000, guid: 56f12168882801a42a7c4ba9546a9088, type: 2}
+    quantity: 0
+  - item: {fileID: 11400000, guid: acfc17a411b8c5b42b0b34647988e297, type: 2}
+    quantity: 1
 --- !u!1 &8398639040853632149
 GameObject:
   m_ObjectHideFlags: 0
