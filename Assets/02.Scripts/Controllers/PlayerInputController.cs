@@ -72,7 +72,7 @@ public class PlayerInputController : TopDownCharacterController
     
     public void OnDodge()
     {
-        if (StamianSystem.CurrentStamina > StamianSystem.amount) 
+        if (StamianSystem.CurrentStamina > StamianSystem.amount)
         {
             
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);   //마우스 위치를 받아서 월드포인트 좌표로 변경 / 해당 위치를 마우스포지션에 저장
