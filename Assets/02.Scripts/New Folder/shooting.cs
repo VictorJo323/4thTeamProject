@@ -17,8 +17,6 @@ public class Shooting : MonoBehaviour
 
     private ProjectileManager _projectileManager;
 
-    private bool isTwo;
-
     private void Awake()
     {
         _controller = GetComponent<TopDownCharacterController>();
@@ -26,8 +24,7 @@ public class Shooting : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        isTwo = true;
+    { 
         _projectileManager = ProjectileManager.instance;
         _controller.OnAttackEvent += OnShoot;
         _controller.OnLookEvent += OnAim;

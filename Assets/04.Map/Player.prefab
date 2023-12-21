@@ -166,7 +166,6 @@ GameObject:
   - component: {fileID: 7043674636056659628}
   - component: {fileID: 5081892836480894626}
   - component: {fileID: 1205138340966537731}
-  - component: {fileID: 7885822872091649820}
   - component: {fileID: -702821947148049706}
   - component: {fileID: -142903341850684649}
   m_Layer: 7
@@ -457,21 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   consumableInventory: {fileID: -142903341850684649}
   characterStats: {fileID: 2319359292549113553}
-  healthSystem: {fileID: 7885822872091649820}
---- !u!114 &7885822872091649820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6711734545848856461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3a2aece77f2e4246b390d16a649709b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
-  uiBar: {fileID: 0}
+  healthSystem: {fileID: 0}
 --- !u!114 &-702821947148049706
 MonoBehaviour:
   m_ObjectHideFlags: 0

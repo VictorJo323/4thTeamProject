@@ -6,7 +6,7 @@ public class ItemUsageController : MonoBehaviour
 {
     public ConsumableInventory consumableInventory;
     public CharacterStatsHandler characterStats;
-    public PlayerHealthSystem healthSystem;
+    public HealthSystem healthSystem;
 
     private Dictionary<int, float> lastUseTimes = new Dictionary<int, float>();
     private Dictionary<int, float> itemCooldowns = new Dictionary<int, float>()
