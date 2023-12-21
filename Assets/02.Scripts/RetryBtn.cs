@@ -7,7 +7,7 @@ public class RetryBtn : MonoBehaviour
 {
     public void Retry()
     {
+        SceneManager.LoadScene("MainScene_YJ");
         Time.timeScale = Time.deltaTime;
-        SceneManager.LoadScene("Stage");
     }
 }
