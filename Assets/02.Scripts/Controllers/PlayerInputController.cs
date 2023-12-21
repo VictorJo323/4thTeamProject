@@ -13,6 +13,9 @@ public class PlayerInputController : TopDownCharacterController
     public float dodgeDistance = 2f;
     public float dodgeSpeed = 10f;
     StamianSystem StamianSystem;
+
+    private PlayerInput playerInput;
+    private Animator animator;
     
 
     protected override void Awake()
@@ -20,12 +23,33 @@ public class PlayerInputController : TopDownCharacterController
         base.Awake();
         _camera = Camera.main;
         StamianSystem = GetComponent<StamianSystem>();
+        playerInput = GetComponent<PlayerInput>();
+        animator = GetComponent<Animator>();
     }
 
     public void OnMove(InputValue value)
     {
         //Debug.Log("OnMove"+value.ToString());
         Vector2 moveInput = value.Get<Vector2>().normalized;
+
+        if (moveInput.y > 0)
+        {
+            animator.SetTrigger("Up");
+        }
+        else if (moveInput.y < 0)
+        {
+            animator.SetTrigger("Down");
+        }
+        if (moveInput.x > 0)
+        {
+            animator.SetTrigger("Right");
+        }
+        else if (moveInput.x < 0)
+        {
+            animator.SetTrigger("Left");
+        }
+
+        animator.SetBool("IsWalking", moveInput.magnitude > 0);
         CallMoveEvent(moveInput);
     }
     public void OnLook(InputValue value)
@@ -48,7 +72,7 @@ public class PlayerInputController : TopDownCharacterController
     
     public void OnDodge()
     {
-        if (StamianSystem.CurrentStamina > StamianSystem.amount) 
+        if (StamianSystem.CurrentStamina > StamianSystem.amount)
         {
             
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);   //마우스 위치를 받아서 월드포인트 좌표로 변경 / 해당 위치를 마우스포지션에 저장

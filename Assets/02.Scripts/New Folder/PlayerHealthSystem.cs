@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -43,7 +45,7 @@ public class PlayerHealthSystem : MonoBehaviour
                 OnInvincibilityEnd?.Invoke();
             }
         }
-        uiBar.value = GetPercentage();
+        //uiBar.value = GetPercentage();
     }
 
     public bool ChangeHealth(float change)
@@ -70,6 +72,7 @@ public class PlayerHealthSystem : MonoBehaviour
         if (CurrentHealth <= 0f)
         {
             CallDeath();
+            SceneManager.LoadScene("04.GameOver");
         }
 
         return true;

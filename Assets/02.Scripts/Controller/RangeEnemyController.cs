@@ -23,7 +23,7 @@ public class RangeEnemyController : EnemyController
             if (distance <= shootRange)
             {
                 int layerMaskTarget = Stats.CurrentStats.characterSO.target;
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 11f, (1 << LayerMask.NameToLayer("Level")) | layerMaskTarget);
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 50f, (1 << LayerMask.NameToLayer("Level")) | layerMaskTarget);
 
                 if (hit.collider != null && layerMaskTarget == (layerMaskTarget | (1 << hit.collider.gameObject.layer)))
                 {

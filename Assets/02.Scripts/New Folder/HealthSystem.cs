@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -70,6 +71,8 @@ public class HealthSystem : MonoBehaviour
         if (CurrentHealth <= 0f)
         {
             CallDeath();
+            Time.timeScale = 0f;
+            SceneManager.LoadScene("04.GameOver");
         }
 
         return true;
@@ -79,6 +82,7 @@ public class HealthSystem : MonoBehaviour
     {
         OnDeath?.Invoke();
     }
+
     public float GetPercentage()
     {
         return CurrentHealth / MaxHealth;

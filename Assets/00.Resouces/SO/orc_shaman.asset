@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: orc_shaman
   m_EditorClassIdentifier: 
   charName: 
-  hp: 1
-  atk: 1
+  hp: 50
+  atk: 10
   def: 1
   spd: 1
   atksp: 1
-  crit: 1
+  crit: 10
   target:
     serializedVersion: 2
     m_Bits: 128
@@ -26,6 +26,7 @@ MonoBehaviour:
   knockbackPower: 1
   knockbackTime: 1
   bulletNameTag: Arrow
+  bulletNameTag2: 
   duration: 10
   spread: 1
   numberofProjectilesPerShot: 1

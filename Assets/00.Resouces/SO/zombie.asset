@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: zombie
   m_EditorClassIdentifier: 
   charName: 
-  hp: 10
-  atk: 1
+  hp: 20
+  atk: 2
   def: 1
   spd: 1
   atksp: 1

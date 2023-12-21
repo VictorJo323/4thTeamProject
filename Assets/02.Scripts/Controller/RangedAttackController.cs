@@ -38,9 +38,11 @@ public class RangedAttackController : MonoBehaviour
         if (_currentDuration > _attackData.duration)
         {
             DestroyProjectile(transform.position, false);
+            DestroyProjectile2(transform.position, false);
         }
 
         _rigidbody.velocity = _direction * _attackData.speed;
+        /*_rigidbody.velocity = _direction * _attackData.speed2*/;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -80,6 +82,7 @@ public class RangedAttackController : MonoBehaviour
         _trailRenderer.Clear();
         _currentDuration = 0;
         _spriteRenderer.color = attackData.projectileColor;
+        //_spriteRenderer2.color = attackData.projectileColor2;
 
         transform.right = _direction;
 
@@ -89,9 +92,19 @@ public class RangedAttackController : MonoBehaviour
     private void UpdateProjectilSprite()
     {
         transform.localScale = Vector3.one * _attackData.size;
+        //transform.localScale = Vector3.one * _attackData.size2;
     }
 
     private void DestroyProjectile(Vector3 position, bool createFx)
+    {
+        if (createFx)
+        {
+            _projectileManager.CreateImpactParticlesAtPostion(position, _attackData);
+        }
+        gameObject.SetActive(false);
+    }
+
+    private void DestroyProjectile2(Vector3 position, bool createFx)
     {
         if (createFx)
         {

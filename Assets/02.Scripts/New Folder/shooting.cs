@@ -1,13 +1,18 @@
 using Cainos.PixelArtTopDown_Basic;
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Shooting : MonoBehaviour
 {
     private TopDownCharacterController _controller;
 
     [SerializeField] private Transform projectileSpawnPosition;
+    // [SerializeField] private Transform projectileSpawnPositionR;
+    [SerializeField] private Transform playerTransform;
+
     private Vector2 _aimDirection = Vector2.right;
 
     private ProjectileManager _projectileManager;
@@ -19,7 +24,7 @@ public class Shooting : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         _projectileManager = ProjectileManager.instance;
         _controller.OnAttackEvent += OnShoot;
         _controller.OnLookEvent += OnAim;
@@ -45,6 +50,11 @@ public class Shooting : MonoBehaviour
             float randomSpread = Random.Range(-rangedAttackData.spread, rangedAttackData.spread);
             angle += randomSpread;
             CreateProjectile(rangedAttackData, angle);
+
+            //if (isTwo)
+            //{
+            //    CreateProjectileTwo(rangedAttackData, angle);
+            //}    
         }
     }
 
@@ -56,6 +66,15 @@ public class Shooting : MonoBehaviour
                 rangedAttackData
                 );
     }
+
+    //private void CreateProjectileTwo(RangedAttackData rangedAttackData, float angle)
+    //{
+    //    _projectileManager.BerserkShoot(
+    //            projectileSpawnPositionR.position,
+    //            RotateVector2(_aimDirection, angle),
+    //            rangedAttackData
+    //            );
+    //}
 
     private static Vector2 RotateVector2(Vector2 v, float degree)
     {

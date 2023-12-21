@@ -73,7 +73,7 @@ Transform:
   m_Children:
   - {fileID: 3943337189102766217}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &4551075210819491972
 Rigidbody2D:
@@ -251,6 +251,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpawnPosition: {fileID: 516246082923227376}
+  projectileSpawnPositionR: {fileID: 0}
+  playerTransform: {fileID: 0}
 --- !u!114 &507222952955467341
 MonoBehaviour:
   m_ObjectHideFlags: 0
