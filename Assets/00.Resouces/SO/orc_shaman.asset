@@ -31,5 +31,5 @@ MonoBehaviour:
   numberofProjectilesPerShot: 1
   multipleProjectilesAngel: 1
   projectileColor: {r: 1, g: 0, b: 0, a: 1}
-  speed: 3
+  speed: 10
   size: 1

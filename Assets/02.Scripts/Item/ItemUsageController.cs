@@ -5,25 +5,61 @@ using UnityEngine;
 public class ItemUsageController : MonoBehaviour
 {
     public ConsumableInventory consumableInventory;
-    private float healthPotionCooldown = 15f;
-    private bool canUseHealthPotion = true;
+    public CharacterStatsHandler characterStats;
+    public HealthSystem healthSystem;
 
-    public void UseHealthPotion(int healthRecoveryAmount)
+    private Dictionary<int, float> lastUseTimes = new Dictionary<int, float>();
+    private Dictionary<int, float> itemCooldowns = new Dictionary<int, float>()
     {
-        if (canUseHealthPotion && consumableInventory.UseHealthPotion())
+        { 1, 10.0f },
+        { 2, 10.0f }
+    };
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            // Ã¼·Â È¸º¹ ·ÎÁ÷
-            Debug.Log($"Recovered {healthRecoveryAmount} health.");
-            StartCoroutine(HealthPotionCooldown());
+            UseItem(1); // 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            UseItem(2); // 2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         }
     }
 
-    private IEnumerator HealthPotionCooldown()
+    private void UseItem(int itemID)
     {
-        canUseHealthPotion = false;
-        yield return new WaitForSeconds(healthPotionCooldown);
-        canUseHealthPotion = true;
+        if (!CanUseItem(itemID))
+            return;
+
+        InventorySlot slot = consumableInventory.slots[itemID - 1];
+        if (slot != null && slot.quantity > 0)
+        {
+            ApplyItemEffect(slot.item);
+            slot.quantity--;
+            lastUseTimes[itemID] = Time.time;
+            ShowConsumableInventory.Instance?.UpdateConsumableInventoryUI();
+        }
     }
 
-    // ±âÅ¸ ¾ÆÀÌÅÛ »ç¿ë ¸Þ¼­µå...
+    private bool CanUseItem(int itemID)
+    {
+        if (!lastUseTimes.ContainsKey(itemID))
+            lastUseTimes[itemID] = 0;
+
+        return Time.time >= lastUseTimes[itemID] + itemCooldowns[itemID];
+    }
+
+    private void ApplyItemEffect(ItemSO item)
+    {
+        switch (item.itemID)
+        {
+            case 1:
+                healthSystem.ChangeHealth(20);
+                break;
+   
+            case 2:
+                break;
+        }
+    }
 }

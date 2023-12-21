@@ -7,20 +7,20 @@ using UnityEngine.Tilemaps;
 public class StartMapPosition : MonoBehaviour
 {
     public string startPos;
-    private DownCharacterController player;
-    private CameraFollow camera;
+    private PlayerInputController player;
+    private CameraFollow maincamera;
 
     private void Awake()
     {
-        player = FindObjectOfType<DownCharacterController>();
-        camera = FindObjectOfType<CameraFollow>();
+        player = FindObjectOfType<PlayerInputController>();
+        maincamera = FindObjectOfType<CameraFollow>();
     }
 
     private void Start()
     {
         if (startPos == player.currentMapName)
         {
-            camera.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            maincamera.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             player.transform.position = transform.position;
         }
     }

@@ -7,8 +7,8 @@ using UnityEngine.Tilemaps;
 public class TransMapPosition : MonoBehaviour
 {
     public string mapName;
-    private DownCharacterController player;
-    private CameraFollow camera;
+    private PlayerInputController player;
+    private CameraFollow maincamera;
 
     [SerializeField] private Transform StagePos;
     [SerializeField] GameObject _trueMap;
@@ -16,15 +16,15 @@ public class TransMapPosition : MonoBehaviour
 
     private void Awake()
     {
-        player = FindObjectOfType<DownCharacterController>();
-        camera = FindObjectOfType<CameraFollow>();
+        player = FindObjectOfType<PlayerInputController>();
+        maincamera = FindObjectOfType<CameraFollow>();
 
         if (player == null)
         {
             Debug.Log("플레이어를 찾을 수 없어");
         }
 
-        if (camera == null)
+        if (maincamera == null)
         {
             Debug.Log("카메라를 찾을 수 없어");
         }
@@ -39,7 +39,7 @@ public class TransMapPosition : MonoBehaviour
             _falseMap.SetActive(false);
 
             player.currentMapName = mapName;
-            camera.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            maincamera.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             player.transform.position = StagePos.transform.position;
         }
     }
