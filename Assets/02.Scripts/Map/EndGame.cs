@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class EndGame : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             Time.timeScale = 0.0f;
+            SceneManager.LoadScene("TobeContine");
         }
     }
 }
