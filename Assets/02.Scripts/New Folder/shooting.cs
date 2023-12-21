@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
     private TopDownCharacterController _controller;
 
     [SerializeField] private Transform projectileSpawnPosition;
-    [SerializeField] private Transform projectileSpawnPositionR;
+    // [SerializeField] private Transform projectileSpawnPositionR;
     [SerializeField] private Transform playerTransform;
 
     private Vector2 _aimDirection = Vector2.right;
@@ -54,10 +54,10 @@ public class Shooting : MonoBehaviour
             angle += randomSpread;
             CreateProjectile(rangedAttackData, angle);
 
-            if (isTwo)
-            {
-                CreateProjectileTwo(rangedAttackData, angle);
-            }    
+            //if (isTwo)
+            //{
+            //    CreateProjectileTwo(rangedAttackData, angle);
+            //}    
         }
     }
 
@@ -70,14 +70,14 @@ public class Shooting : MonoBehaviour
                 );
     }
 
-    private void CreateProjectileTwo(RangedAttackData rangedAttackData, float angle)
-    {
-        _projectileManager.BerserkShoot(
-                projectileSpawnPositionR.position,
-                RotateVector2(_aimDirection, angle),
-                rangedAttackData
-                );
-    }
+    //private void CreateProjectileTwo(RangedAttackData rangedAttackData, float angle)
+    //{
+    //    _projectileManager.BerserkShoot(
+    //            projectileSpawnPositionR.position,
+    //            RotateVector2(_aimDirection, angle),
+    //            rangedAttackData
+    //            );
+    //}
 
     private static Vector2 RotateVector2(Vector2 v, float degree)
     {
