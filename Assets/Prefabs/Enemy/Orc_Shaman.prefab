@@ -61,7 +61,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!114 &1477250739196791111
 MonoBehaviour:
@@ -316,7 +316,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: c6ddffdd3c434734487adf59f3f13e6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -421,7 +421,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: e5ac7b2607e4bd141af128cf40a305f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -561,12 +561,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8793752f6cb7701488d09f9d1ecc8e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStats:
-    statsChangeType: 2
-    maxHealth: 10
-    spd: 0
-    characterSO: {fileID: 11400000, guid: f2143053e8905d74b9781e9d35ba62a4, type: 2}
+  baseStats: {fileID: 0}
   statsModifiers: []
+  weaponInventory: {fileID: 0}
 --- !u!114 &1781561555267219204
 MonoBehaviour:
   m_ObjectHideFlags: 0
